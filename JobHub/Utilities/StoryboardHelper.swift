@@ -1,9 +1,27 @@
 //
-//  StoryboardHelper.swift
-//  JobHub
+//  File.swift
+//  Sloggers
 //
-//  Created by Ankit Angra on 07/03/18.
-//  Copyright © 2018 Ankit Angra. All rights reserved.
+//  Created by Ankit Angra on 05/02/17.
+//  Copyright © 2017 NewMediaTechies. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIStoryboard {
+    
+    enum StoryboardIdentifiers : String {
+        case JobTitleController = "jobTitleVC"
+        case JobIndustryController = "jobIndustryVC"
+        case JobLocationController = "jobLocationVC"
+    }
+    // LoginStoryboard
+    class func mainStoryboard() -> UIStoryboard {
+        return UIStoryboard(name: "Main", bundle: Bundle.main)
+    }
+    
+    class func homeStoryboard () -> UIStoryboard {
+        return UIStoryboard(name: "HomeStoryboard", bundle: Bundle.main)
+    }
+
+}

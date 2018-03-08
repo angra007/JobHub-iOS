@@ -18,12 +18,17 @@
 		DE4685B82050CE2E007E2E85 /* DataFetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4685B62050CE2E007E2E85 /* DataFetchManager.swift */; };
 		DE4685BC2050CE3D007E2E85 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4685BA2050CE3D007E2E85 /* AlertManager.swift */; };
 		DE4685BD2050CE3D007E2E85 /* ActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4685BB2050CE3D007E2E85 /* ActivityIndicatorManager.swift */; };
-		DE4685C52050CFEB007E2E85 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4685C32050CFEB007E2E85 /* LoginViewController.swift */; };
-		DE4685C62050CFEB007E2E85 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4685C42050CFEB007E2E85 /* SignUpViewController.swift */; };
 		DE4685C82050CFFA007E2E85 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4685C72050CFFA007E2E85 /* SearchViewController.swift */; };
 		DE4685CA2050D01D007E2E85 /* DataAnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4685C92050D01D007E2E85 /* DataAnalyticsViewController.swift */; };
 		DE4685CC2050D075007E2E85 /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4685CB2050D075007E2E85 /* StoryboardHelper.swift */; };
 		DE4685CE20510324007E2E85 /* UIViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4685CD20510324007E2E85 /* UIViewHelper.swift */; };
+		DE58AB712051EBC400D5240A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58AB6F2051EBC400D5240A /* LoginViewController.swift */; };
+		DE58AB722051EBC400D5240A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58AB702051EBC400D5240A /* SignUpViewController.swift */; };
+		DE58AB792051ECD000D5240A /* JobTitlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58AB782051ECCF00D5240A /* JobTitlesViewController.swift */; };
+		DE58AB7B2051ECE600D5240A /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE58AB7A2051ECE600D5240A /* HomeStoryboard.storyboard */; };
+		DE58AB7D2051F16800D5240A /* JobIndustryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58AB7C2051F16800D5240A /* JobIndustryViewController.swift */; };
+		DE58AB7F2051F1AD00D5240A /* JobLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58AB7E2051F1AD00D5240A /* JobLocationViewController.swift */; };
+		DE58AB812051F3A000D5240A /* TableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58AB802051F3A000D5240A /* TableViewHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,12 +47,17 @@
 		DE4685B62050CE2E007E2E85 /* DataFetchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataFetchManager.swift; path = Network/DataFetchManager.swift; sourceTree = "<group>"; };
 		DE4685BA2050CE3D007E2E85 /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertManager.swift; path = Utilities/AlertManager.swift; sourceTree = "<group>"; };
 		DE4685BB2050CE3D007E2E85 /* ActivityIndicatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityIndicatorManager.swift; path = Utilities/ActivityIndicatorManager.swift; sourceTree = "<group>"; };
-		DE4685C32050CFEB007E2E85 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Modules/ViewController/LoginViewController.swift; sourceTree = "<group>"; };
-		DE4685C42050CFEB007E2E85 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Modules/ViewController/SignUpViewController.swift; sourceTree = "<group>"; };
 		DE4685C72050CFFA007E2E85 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Modules/ViewController/SearchViewController.swift; sourceTree = "<group>"; };
 		DE4685C92050D01D007E2E85 /* DataAnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataAnalyticsViewController.swift; path = Modules/ViewController/DataAnalyticsViewController.swift; sourceTree = "<group>"; };
 		DE4685CB2050D075007E2E85 /* StoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoryboardHelper.swift; path = Utilities/StoryboardHelper.swift; sourceTree = "<group>"; };
 		DE4685CD20510324007E2E85 /* UIViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewHelper.swift; path = Utilities/UIViewHelper.swift; sourceTree = "<group>"; };
+		DE58AB6F2051EBC400D5240A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Modules/Login/LoginViewController.swift; sourceTree = "<group>"; };
+		DE58AB702051EBC400D5240A /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Modules/Login/SignUpViewController.swift; sourceTree = "<group>"; };
+		DE58AB782051ECCF00D5240A /* JobTitlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobTitlesViewController.swift; path = Modules/Home/ViewControllers/JobTitlesViewController.swift; sourceTree = "<group>"; };
+		DE58AB7A2051ECE600D5240A /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = HomeStoryboard.storyboard; path = Modules/Home/Storyboard/HomeStoryboard.storyboard; sourceTree = "<group>"; };
+		DE58AB7C2051F16800D5240A /* JobIndustryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobIndustryViewController.swift; path = Modules/Home/ViewControllers/JobIndustryViewController.swift; sourceTree = "<group>"; };
+		DE58AB7E2051F1AD00D5240A /* JobLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobLocationViewController.swift; path = Modules/Home/ViewControllers/JobLocationViewController.swift; sourceTree = "<group>"; };
+		DE58AB802051F3A000D5240A /* TableViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewHelper.swift; path = Utilities/TableViewHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +102,7 @@
 		DE4685882050C98F007E2E85 /* JobHub */ = {
 			isa = PBXGroup;
 			children = (
-				DE4685BE2050CEEB007E2E85 /* ViewController */,
+				DE4685BE2050CEEB007E2E85 /* Module */,
 				DE4685B92050CE32007E2E85 /* Utilities */,
 				DE4685B42050CE23007E2E85 /* Network */,
 				DE4685A02050CB29007E2E85 /* SupportingFiles */,
@@ -126,6 +136,7 @@
 		DE4685B92050CE32007E2E85 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DE58AB802051F3A000D5240A /* TableViewHelper.swift */,
 				DE4685CD20510324007E2E85 /* UIViewHelper.swift */,
 				DE4685BB2050CE3D007E2E85 /* ActivityIndicatorManager.swift */,
 				DE4685BA2050CE3D007E2E85 /* AlertManager.swift */,
@@ -134,15 +145,51 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
-		DE4685BE2050CEEB007E2E85 /* ViewController */ = {
+		DE4685BE2050CEEB007E2E85 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				DE4685C32050CFEB007E2E85 /* LoginViewController.swift */,
-				DE4685C42050CFEB007E2E85 /* SignUpViewController.swift */,
+				DE58AB732051EC6B00D5240A /* Home */,
+				DE58AB6E2051EBA400D5240A /* Login */,
 				DE4685C72050CFFA007E2E85 /* SearchViewController.swift */,
 				DE4685C92050D01D007E2E85 /* DataAnalyticsViewController.swift */,
 			);
+			name = Module;
+			sourceTree = "<group>";
+		};
+		DE58AB6E2051EBA400D5240A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DE58AB6F2051EBC400D5240A /* LoginViewController.swift */,
+				DE58AB702051EBC400D5240A /* SignUpViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		DE58AB732051EC6B00D5240A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DE58AB772051ECC000D5240A /* Storyboard */,
+				DE58AB762051ECBA00D5240A /* ViewController */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		DE58AB762051ECBA00D5240A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DE58AB782051ECCF00D5240A /* JobTitlesViewController.swift */,
+				DE58AB7C2051F16800D5240A /* JobIndustryViewController.swift */,
+				DE58AB7E2051F1AD00D5240A /* JobLocationViewController.swift */,
+			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		DE58AB772051ECC000D5240A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DE58AB7A2051ECE600D5240A /* HomeStoryboard.storyboard */,
+			);
+			name = Storyboard;
 			sourceTree = "<group>";
 		};
 		F75396D4494E95BADDEAD0B4 /* Frameworks */ = {
@@ -219,6 +266,7 @@
 				DE46859F2050CB23007E2E85 /* GoogleService-Info.plist in Resources */,
 				DE4685942050C98F007E2E85 /* Assets.xcassets in Resources */,
 				DE46858F2050C98F007E2E85 /* Main.storyboard in Resources */,
+				DE58AB7B2051ECE600D5240A /* HomeStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,14 +346,18 @@
 				DE4685C82050CFFA007E2E85 /* SearchViewController.swift in Sources */,
 				DE4685B72050CE2E007E2E85 /* NetworkConstants.swift in Sources */,
 				DE4685CE20510324007E2E85 /* UIViewHelper.swift in Sources */,
+				DE58AB812051F3A000D5240A /* TableViewHelper.swift in Sources */,
 				DE4685BD2050CE3D007E2E85 /* ActivityIndicatorManager.swift in Sources */,
 				DE4685BC2050CE3D007E2E85 /* AlertManager.swift in Sources */,
-				DE4685C52050CFEB007E2E85 /* LoginViewController.swift in Sources */,
 				DE4685922050C98F007E2E85 /* JobHub.xcdatamodeld in Sources */,
 				DE4685CC2050D075007E2E85 /* StoryboardHelper.swift in Sources */,
-				DE4685C62050CFEB007E2E85 /* SignUpViewController.swift in Sources */,
+				DE58AB722051EBC400D5240A /* SignUpViewController.swift in Sources */,
+				DE58AB7D2051F16800D5240A /* JobIndustryViewController.swift in Sources */,
+				DE58AB792051ECD000D5240A /* JobTitlesViewController.swift in Sources */,
+				DE58AB7F2051F1AD00D5240A /* JobLocationViewController.swift in Sources */,
 				DE4685CA2050D01D007E2E85 /* DataAnalyticsViewController.swift in Sources */,
 				DE46858A2050C98F007E2E85 /* AppDelegate.swift in Sources */,
+				DE58AB712051EBC400D5240A /* LoginViewController.swift in Sources */,
 				DE4685B82050CE2E007E2E85 /* DataFetchManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
