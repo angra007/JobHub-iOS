@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>244346618828-6iu6uqd09355nhlc6v873sl8eusrgsd8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.244346618828-6iu6uqd09355nhlc6v873sl8eusrgsd8</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBfewkBbSZRlrYDyTOjoDkUbEdh23U3G7E</string>
+	<key>GCM_SENDER_ID</key>
+	<string>244346618828</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>aaa.JobHub.www</string>
+	<key>PROJECT_ID</key>
+	<string>jobhub-ed5d7</string>
+	<key>STORAGE_BUCKET</key>
+	<string>jobhub-ed5d7.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:244346618828:ios:7da66b6aaa98e232</string>
+	<key>DATABASE_URL</key>
+	<string>https://jobhub-ed5d7.firebaseio.com</string>
+</dict>
+</plist>
