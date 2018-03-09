@@ -11,10 +11,17 @@ import UIKit
 class JobIndustryViewController: UIViewController {
 
     @IBOutlet weak var selectedJobIndustryLabel: NSLayoutConstraint!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.delegate = self
+            tableView.dataSource = self
+            tableView.register(JobFilterTableViewCell.self)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.register(JobFilterTableViewCell.self)
         // Do any additional setup after loading the view.
     }
 
@@ -24,6 +31,8 @@ class JobIndustryViewController: UIViewController {
     }
     
     @IBAction func didTapNextButton(_ sender: UIButton) {
+        let jobTitleViewController = UIStoryboard.homeStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.JobTitleController.rawValue)
+        self.navigationController?.pushViewController(jobTitleViewController, animated: true)
     }
     
 }
@@ -39,8 +48,8 @@ extension JobIndustryViewController : UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell.init()
-        
+        let cell : JobFilterTableViewCell = tableView.dequeuResuableCell(forIndexPath: indexPath)
+        cell.jobTitleLabel.text = "Ankit"
         return cell
     }
 }

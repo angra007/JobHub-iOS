@@ -29,6 +29,9 @@
 		DE58AB7D2051F16800D5240A /* JobIndustryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58AB7C2051F16800D5240A /* JobIndustryViewController.swift */; };
 		DE58AB7F2051F1AD00D5240A /* JobLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58AB7E2051F1AD00D5240A /* JobLocationViewController.swift */; };
 		DE58AB812051F3A000D5240A /* TableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58AB802051F3A000D5240A /* TableViewHelper.swift */; };
+		DE58AB83205276F100D5240A /* JobSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58AB82205276F100D5240A /* JobSearchViewController.swift */; };
+		DE58AB8F2052D20500D5240A /* JobFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58AB8D2052D20500D5240A /* JobFilterTableViewCell.swift */; };
+		DE58AB902052D20500D5240A /* JobFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE58AB8E2052D20500D5240A /* JobFilterTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		DE58AB7C2051F16800D5240A /* JobIndustryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobIndustryViewController.swift; path = Modules/Home/ViewControllers/JobIndustryViewController.swift; sourceTree = "<group>"; };
 		DE58AB7E2051F1AD00D5240A /* JobLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobLocationViewController.swift; path = Modules/Home/ViewControllers/JobLocationViewController.swift; sourceTree = "<group>"; };
 		DE58AB802051F3A000D5240A /* TableViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewHelper.swift; path = Utilities/TableViewHelper.swift; sourceTree = "<group>"; };
+		DE58AB82205276F100D5240A /* JobSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobSearchViewController.swift; path = Modules/Home/ViewControllers/JobSearchViewController.swift; sourceTree = "<group>"; };
+		DE58AB8D2052D20500D5240A /* JobFilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobFilterTableViewCell.swift; path = Modules/Home/Views/TableViewCell/JobTitle/JobFilterTableViewCell.swift; sourceTree = "<group>"; };
+		DE58AB8E2052D20500D5240A /* JobFilterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = JobFilterTableViewCell.xib; path = Modules/Home/Views/TableViewCell/JobTitle/JobFilterTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +174,7 @@
 		DE58AB732051EC6B00D5240A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DE58AB842052C99900D5240A /* Views */,
 				DE58AB772051ECC000D5240A /* Storyboard */,
 				DE58AB762051ECBA00D5240A /* ViewController */,
 			);
@@ -180,6 +187,7 @@
 				DE58AB782051ECCF00D5240A /* JobTitlesViewController.swift */,
 				DE58AB7C2051F16800D5240A /* JobIndustryViewController.swift */,
 				DE58AB7E2051F1AD00D5240A /* JobLocationViewController.swift */,
+				DE58AB82205276F100D5240A /* JobSearchViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -190,6 +198,31 @@
 				DE58AB7A2051ECE600D5240A /* HomeStoryboard.storyboard */,
 			);
 			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		DE58AB842052C99900D5240A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE58AB852052C9A000D5240A /* TableViewCell */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DE58AB852052C9A000D5240A /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DE58AB8C2052D1F000D5240A /* JobTitle */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		DE58AB8C2052D1F000D5240A /* JobTitle */ = {
+			isa = PBXGroup;
+			children = (
+				DE58AB8D2052D20500D5240A /* JobFilterTableViewCell.swift */,
+				DE58AB8E2052D20500D5240A /* JobFilterTableViewCell.xib */,
+			);
+			name = JobTitle;
 			sourceTree = "<group>";
 		};
 		F75396D4494E95BADDEAD0B4 /* Frameworks */ = {
@@ -264,6 +297,7 @@
 			files = (
 				DE4685972050C98F007E2E85 /* LaunchScreen.storyboard in Resources */,
 				DE46859F2050CB23007E2E85 /* GoogleService-Info.plist in Resources */,
+				DE58AB902052D20500D5240A /* JobFilterTableViewCell.xib in Resources */,
 				DE4685942050C98F007E2E85 /* Assets.xcassets in Resources */,
 				DE46858F2050C98F007E2E85 /* Main.storyboard in Resources */,
 				DE58AB7B2051ECE600D5240A /* HomeStoryboard.storyboard in Resources */,
@@ -353,7 +387,9 @@
 				DE4685CC2050D075007E2E85 /* StoryboardHelper.swift in Sources */,
 				DE58AB722051EBC400D5240A /* SignUpViewController.swift in Sources */,
 				DE58AB7D2051F16800D5240A /* JobIndustryViewController.swift in Sources */,
+				DE58AB83205276F100D5240A /* JobSearchViewController.swift in Sources */,
 				DE58AB792051ECD000D5240A /* JobTitlesViewController.swift in Sources */,
+				DE58AB8F2052D20500D5240A /* JobFilterTableViewCell.swift in Sources */,
 				DE58AB7F2051F1AD00D5240A /* JobLocationViewController.swift in Sources */,
 				DE4685CA2050D01D007E2E85 /* DataAnalyticsViewController.swift in Sources */,
 				DE46858A2050C98F007E2E85 /* AppDelegate.swift in Sources */,

@@ -14,6 +14,7 @@ extension UIStoryboard {
         case JobTitleController = "jobTitleVC"
         case JobIndustryController = "jobIndustryVC"
         case JobLocationController = "jobLocationVC"
+        case JobSearchController = "jobSearchVC"
     }
     // LoginStoryboard
     class func mainStoryboard() -> UIStoryboard {

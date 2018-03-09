@@ -10,11 +10,16 @@ import UIKit
 
 class JobTitlesViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.delegate = self
+            tableView.dataSource = self
+            tableView.register(JobFilterTableViewCell.self)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,8 +30,10 @@ class JobTitlesViewController: UIViewController {
     @IBOutlet weak var jobTitleLabel: UILabel!
     
     @IBAction func didTapNextButton(_ sender: UIButton) {
+        let jobLocationViewController = UIStoryboard.homeStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.JobLocationController.rawValue)
+        self.navigationController?.pushViewController(jobLocationViewController, animated: true)
     }
-    
+
 }
 
 extension JobTitlesViewController : UITableViewDelegate, UITableViewDataSource {
@@ -40,8 +47,8 @@ extension JobTitlesViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell.init()
-        
+        let cell : JobFilterTableViewCell = tableView.dequeuResuableCell(forIndexPath: indexPath)
+        cell.jobTitleLabel.text = "Ankit"
         return cell
     }
 }

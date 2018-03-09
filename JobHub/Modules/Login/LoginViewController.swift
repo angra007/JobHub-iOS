@@ -16,20 +16,33 @@ class LoginViewController: UIViewController {
     @IBAction func didTapOnForgotPassword(_ sender: UIButton) {
     }
     @IBAction func didTapLoginButton(_ sender: UIButton) {
+    
         
-        if emailTextField.text?.isBlank == true {
-            AlertManager.showAlert(inViewController: self, withTitle: "Error", message: "Please enter your email.")
-        }
-        else if passwordTextField.text?.isBlank == true {
-            AlertManager.showAlert(inViewController: self, withTitle: "Error", message: "Please enter your password.")
-        }
-        else {
-            ActivityIndicatorManager.showActivityIndicator(inViews: self.view)
-            NetworkManager.login(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user) in
-                ActivityIndicatorManager.dismissActivityIndicator(fromView: self.view)
-                
-            })
-        }
+        let jobTitleViewController = UIStoryboard.homeStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.JobIndustryController.rawValue)
+        let jobTitleNavigationController = UINavigationController.init(rootViewController: jobTitleViewController)
+        self.navigationController?.present(jobTitleNavigationController, animated: true, completion: nil)
+//        if emailTextField.text?.isBlank == true {
+//            AlertManager.showAlert(inViewController: self, withTitle: "Error", message: "Please enter your email.")
+//        }
+//        else if passwordTextField.text?.isBlank == true {
+//            AlertManager.showAlert(inViewController: self, withTitle: "Error", message: "Please enter your password.")
+//        }
+//        else {
+//            ActivityIndicatorManager.showActivityIndicator(inViews: self.view)
+//            NetworkManager.login(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user) in
+//                ActivityIndicatorManager.dismissActivityIndicator(fromView: self.view)
+//
+//                // is first login
+//                    // ask choice
+//                // show search directly
+//
+//
+//            })
+//
+//
+//            let jobTitleViewController = UIStoryboard.homeStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.JobTitleController.rawValue)
+//            self.navigationController?.pushViewController(jobTitleViewController, animated: true)
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

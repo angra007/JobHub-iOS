@@ -10,7 +10,14 @@ import UIKit
 
 class JobLocationViewController: UIViewController {
 
-    @IBOutlet weak var tableViiew: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.delegate = self
+            tableView.dataSource = self
+            tableView.register(JobFilterTableViewCell.self)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -23,6 +30,8 @@ class JobLocationViewController: UIViewController {
     
     @IBOutlet weak var selectedLocationLabel: UILabel!
     @IBAction func didTapNextButton(_ sender: UIButton) {
+        let jobSearchViewController = UIStoryboard.homeStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.JobSearchController.rawValue)
+        self.navigationController?.pushViewController(jobSearchViewController, animated: true)
     }
 }
 
@@ -37,8 +46,8 @@ extension JobLocationViewController : UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell.init()
-        
+        let cell : JobFilterTableViewCell = tableView.dequeuResuableCell(forIndexPath: indexPath)
+        cell.jobTitleLabel.text = "Ankit"
         return cell
     }
 }
