@@ -1,5 +1,5 @@
 //
-//  JobListCellTableViewCell.swift
+//  ChatListingTableViewCell.swift
 //  JobHub
 //
 //  Created by Ankit Angra on 13/03/18.
@@ -8,8 +8,11 @@
 
 import UIKit
 
-class JobListCellTableViewCell: UITableViewCell, NibLoadableView {
+class ChatListingTableViewCell: UITableViewCell, NibLoadableView {
 
+    @IBOutlet weak var lastMessage: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var profileImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

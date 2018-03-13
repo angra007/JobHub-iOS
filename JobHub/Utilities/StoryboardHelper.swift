@@ -16,6 +16,7 @@ extension UIStoryboard {
         case JobLocationController = "jobLocationVC"
         case JobSearchController = "jobSearchVC"
         case JobTabBarController = "jobHomeViewController"
+        case JobSearchListingController = "jobSearchListing"
         
         case ChatListingController = "chatListingVC"
         

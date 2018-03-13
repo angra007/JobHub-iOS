@@ -366,10 +366,40 @@
                         <viewLayoutGuide key="safeArea" id="56p-IR-cfK"/>
                     </view>
                     <navigationItem key="navigationItem" id="bPM-jv-l05"/>
+                    <connections>
+                        <outlet property="tableView" destination="GCo-3s-t60" id="4Um-gr-TQj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tom-II-tAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4238" y="34"/>
+        </scene>
+        <!--Job Search Listing View Controller-->
+        <scene sceneID="fxA-q6-A1B">
+            <objects>
+                <viewController storyboardIdentifier="jobSearchListing" id="dg9-Wb-596" customClass="JobSearchListingViewController" customModule="JobHub" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eI0-Tv-P5Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vG2-MO-dfg">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vG2-MO-dfg" firstAttribute="leading" secondItem="w2P-t2-Z3N" secondAttribute="leading" id="3MD-Lg-C2R"/>
+                            <constraint firstItem="w2P-t2-Z3N" firstAttribute="bottom" secondItem="vG2-MO-dfg" secondAttribute="bottom" id="5j9-wi-ld4"/>
+                            <constraint firstItem="vG2-MO-dfg" firstAttribute="top" secondItem="w2P-t2-Z3N" secondAttribute="top" id="JIT-dv-0tf"/>
+                            <constraint firstItem="w2P-t2-Z3N" firstAttribute="trailing" secondItem="vG2-MO-dfg" secondAttribute="trailing" id="bJA-SN-X9M"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w2P-t2-Z3N"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bwo-cE-SuK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4961" y="40"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Afx-z8-OQ5">

@@ -28,6 +28,9 @@
 		DE151AE12057A7C100C2E770 /* DeleteInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE151ADF2057A7C100C2E770 /* DeleteInfoTableViewCell.xib */; };
 		DE151AE72057ABF900C2E770 /* JobListCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AE52057ABF900C2E770 /* JobListCellTableViewCell.swift */; };
 		DE151AE82057ABF900C2E770 /* JobListCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE151AE62057ABF900C2E770 /* JobListCellTableViewCell.xib */; };
+		DE151AEA2057AF3100C2E770 /* JobSearchListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AE92057AF3100C2E770 /* JobSearchListingViewController.swift */; };
+		DE151AF02057C33D00C2E770 /* ChatListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AEE2057C33D00C2E770 /* ChatListingTableViewCell.swift */; };
+		DE151AF12057C33D00C2E770 /* ChatListingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE151AEF2057C33D00C2E770 /* ChatListingTableViewCell.xib */; };
 		DE46858A2050C98F007E2E85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4685892050C98F007E2E85 /* AppDelegate.swift */; };
 		DE46858F2050C98F007E2E85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE46858D2050C98F007E2E85 /* Main.storyboard */; };
 		DE4685922050C98F007E2E85 /* JobHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE4685902050C98F007E2E85 /* JobHub.xcdatamodeld */; };
@@ -79,6 +82,9 @@
 		DE151ADF2057A7C100C2E770 /* DeleteInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeleteInfoTableViewCell.xib; sourceTree = "<group>"; };
 		DE151AE52057ABF900C2E770 /* JobListCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobListCellTableViewCell.swift; path = Modules/Home/Views/TableViewCell/JobListCell/JobListCellTableViewCell.swift; sourceTree = "<group>"; };
 		DE151AE62057ABF900C2E770 /* JobListCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = JobListCellTableViewCell.xib; path = Modules/Home/Views/TableViewCell/JobListCell/JobListCellTableViewCell.xib; sourceTree = "<group>"; };
+		DE151AE92057AF3100C2E770 /* JobSearchListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobSearchListingViewController.swift; path = Modules/Home/ViewControllers/JobSearchListingViewController.swift; sourceTree = "<group>"; };
+		DE151AEE2057C33D00C2E770 /* ChatListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListingTableViewCell.swift; sourceTree = "<group>"; };
+		DE151AEF2057C33D00C2E770 /* ChatListingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatListingTableViewCell.xib; sourceTree = "<group>"; };
 		DE4685862050C98F007E2E85 /* JobHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4685892050C98F007E2E85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE46858E2050C98F007E2E85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -159,6 +165,7 @@
 		DE151AB2205767B600C2E770 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DE151AEC2057C31C00C2E770 /* TableViewCell */,
 				DE151AB9205767E700C2E770 /* ChatStoryboard.storyboard */,
 			);
 			path = View;
@@ -246,6 +253,30 @@
 				DE151AE62057ABF900C2E770 /* JobListCellTableViewCell.xib */,
 			);
 			name = JobListCell;
+			sourceTree = "<group>";
+		};
+		DE151AEB2057BF1C00C2E770 /* ProfileCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ProfileCell;
+			sourceTree = "<group>";
+		};
+		DE151AEC2057C31C00C2E770 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DE151AED2057C32500C2E770 /* ChatListing */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		DE151AED2057C32500C2E770 /* ChatListing */ = {
+			isa = PBXGroup;
+			children = (
+				DE151AEE2057C33D00C2E770 /* ChatListingTableViewCell.swift */,
+				DE151AEF2057C33D00C2E770 /* ChatListingTableViewCell.xib */,
+			);
+			path = ChatListing;
 			sourceTree = "<group>";
 		};
 		DE46857D2050C98F007E2E85 = {
@@ -354,6 +385,7 @@
 				DE58AB7E2051F1AD00D5240A /* JobLocationViewController.swift */,
 				DE58AB82205276F100D5240A /* JobSearchViewController.swift */,
 				DE58AB912052F0CC00D5240A /* JobHomeViewController.swift */,
+				DE151AE92057AF3100C2E770 /* JobSearchListingViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -377,6 +409,7 @@
 		DE58AB852052C9A000D5240A /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				DE151AEB2057BF1C00C2E770 /* ProfileCell */,
 				DE151AE22057AB9D00C2E770 /* JobListCell */,
 				DE58AB8C2052D1F000D5240A /* JobTitle */,
 			);
@@ -474,6 +507,7 @@
 				DE151AD92057A4FE00C2E770 /* PhoneNumberTableViewCell.xib in Resources */,
 				DE151ABC205767F500C2E770 /* SettingsStoryboard.storyboard in Resources */,
 				DE151ABA205767E700C2E770 /* ChatStoryboard.storyboard in Resources */,
+				DE151AF12057C33D00C2E770 /* ChatListingTableViewCell.xib in Resources */,
 				DE151AC92057721B00C2E770 /* ProfileTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,6 +597,7 @@
 				DE151ADC2057A75800C2E770 /* DeleteAccountViewController.swift in Sources */,
 				DE4685B72050CE2E007E2E85 /* NetworkConstants.swift in Sources */,
 				DE4685CE20510324007E2E85 /* UIViewHelper.swift in Sources */,
+				DE151AF02057C33D00C2E770 /* ChatListingTableViewCell.swift in Sources */,
 				DE58AB812051F3A000D5240A /* TableViewHelper.swift in Sources */,
 				DE151AD1205799C700C2E770 /* Constants.swift in Sources */,
 				DE4685BD2050CE3D007E2E85 /* ActivityIndicatorManager.swift in Sources */,
@@ -575,6 +610,7 @@
 				DE58AB7D2051F16800D5240A /* JobIndustryViewController.swift in Sources */,
 				DE58AB83205276F100D5240A /* JobSearchViewController.swift in Sources */,
 				DE151AE72057ABF900C2E770 /* JobListCellTableViewCell.swift in Sources */,
+				DE151AEA2057AF3100C2E770 /* JobSearchListingViewController.swift in Sources */,
 				DE58AB792051ECD000D5240A /* JobTitlesViewController.swift in Sources */,
 				DE58AB8F2052D20500D5240A /* JobFilterTableViewCell.swift in Sources */,
 				DE151AE02057A7C100C2E770 /* DeleteInfoTableViewCell.swift in Sources */,
