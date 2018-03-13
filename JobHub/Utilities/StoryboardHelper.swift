@@ -15,6 +15,14 @@ extension UIStoryboard {
         case JobIndustryController = "jobIndustryVC"
         case JobLocationController = "jobLocationVC"
         case JobSearchController = "jobSearchVC"
+        case JobTabBarController = "jobHomeViewController"
+        
+        case ChatListingController = "chatListingVC"
+        
+        case SettingsLandingController = "settingLandingVC"
+        
+        case ContactsListingController = "contactsListingController"
+        
     }
     // LoginStoryboard
     class func mainStoryboard() -> UIStoryboard {
@@ -23,6 +31,18 @@ extension UIStoryboard {
     
     class func homeStoryboard () -> UIStoryboard {
         return UIStoryboard(name: "HomeStoryboard", bundle: Bundle.main)
+    }
+    
+    class func chatStoryboard () -> UIStoryboard {
+        return UIStoryboard(name: "ChatStoryboard", bundle: Bundle.main)
+    }
+    
+    class func settingsStoryboard () -> UIStoryboard {
+        return UIStoryboard(name: "SettingsStoryboard", bundle: Bundle.main)
+    }
+    
+    class func contactsStoryboard () -> UIStoryboard {
+        return UIStoryboard(name: "ContactsStoryboard", bundle: Bundle.main)
     }
 
 }

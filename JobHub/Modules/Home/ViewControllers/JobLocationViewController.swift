@@ -28,11 +28,31 @@ class JobLocationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
     @IBOutlet weak var selectedLocationLabel: UILabel!
     @IBAction func didTapNextButton(_ sender: UIButton) {
-        let jobSearchViewController = UIStoryboard.homeStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.JobSearchController.rawValue)
+        let jobSearchViewController = UIStoryboard.homeStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.JobTabBarController.rawValue)
         self.navigationController?.pushViewController(jobSearchViewController, animated: true)
     }
+    
+    
+    func addChildController(childController : UIViewController , inContentView contentView : UIView) -> Void {
+        childController.willMove(toParentViewController: self)
+        childController.view.frame = contentView.bounds
+        self.addChildViewController(childController)
+        contentView.addSubview(childController.view)
+        childController.didMove(toParentViewController: self)
+        //        childController.beginAppearanceTransition(true, animated: true)
+    }
+    
+    func removeChildController(childController : UIViewController) -> Void {
+        childController.willMove(toParentViewController: nil)
+        childController.view.removeFromSuperview()
+        childController.removeFromParentViewController()
+    }
+    
+    
 }
 
 extension JobLocationViewController : UITableViewDelegate, UITableViewDataSource {

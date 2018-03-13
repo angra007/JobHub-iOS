@@ -11,6 +11,8 @@ target 'JobHub' do
   pod 'SVProgressHUD'
   pod 'JVFloatLabeledTextField'
   pod 'IQKeyboardManagerSwift', '5.0.0'
+  pod 'SDWebImage', '~> 4.0'
+  pod 'TOCropViewController'
   # Pods for JobHub
 
 end

@@ -51,7 +51,11 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - SDWebImage (4.2.2):
+    - SDWebImage/Core (= 4.2.2)
+  - SDWebImage/Core (4.2.2)
   - SVProgressHUD (2.2.2)
+  - TOCropViewController (2.1.0)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -60,7 +64,9 @@ DEPENDENCIES:
   - Firebase/Storage
   - IQKeyboardManagerSwift (= 5.0.0)
   - JVFloatLabeledTextField
+  - SDWebImage (~> 4.0)
   - SVProgressHUD
+  - TOCropViewController
 
 SPEC CHECKSUMS:
   Firebase: d83d287bdb6b1c78320561482706d1fcfc8ddfc1
@@ -76,8 +82,10 @@ SPEC CHECKSUMS:
   JVFloatLabeledTextField: cfc44e3c4d493b2ed92ede8035e8e89c2912ba64
   leveldb-library: 44ef425bfde64f5b41daef86b38db2d13edbbee1
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  TOCropViewController: f88194a084f6afe1fd6f21a3f0edda7dd097e38b
 
-PODFILE CHECKSUM: 6488f9ab0bf47d7c51043144f2256dc90035eeda
+PODFILE CHECKSUM: e25ffd51b89a90d2003fba3abd7ab70cad150bd5
 
 COCOAPODS: 1.3.1
