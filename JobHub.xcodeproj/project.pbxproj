@@ -14,6 +14,20 @@
 		DE151AC02057689100C2E770 /* ChatListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151ABF2057689100C2E770 /* ChatListingViewController.swift */; };
 		DE151AC2205768C400C2E770 /* SettingsLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AC1205768C400C2E770 /* SettingsLandingViewController.swift */; };
 		DE151AC4205768F700C2E770 /* ContactsListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AC3205768F700C2E770 /* ContactsListingViewController.swift */; };
+		DE151AC82057721B00C2E770 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AC62057721B00C2E770 /* ProfileTableViewCell.swift */; };
+		DE151AC92057721B00C2E770 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE151AC72057721B00C2E770 /* ProfileTableViewCell.xib */; };
+		DE151ACD20578A6F00C2E770 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151ACC20578A6F00C2E770 /* AccountViewController.swift */; };
+		DE151ACF2057992300C2E770 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151ACE2057992300C2E770 /* PrivacyViewController.swift */; };
+		DE151AD1205799C700C2E770 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AD0205799C700C2E770 /* Constants.swift */; };
+		DE151AD320579D3500C2E770 /* SelectPrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AD220579D3500C2E770 /* SelectPrivacyViewController.swift */; };
+		DE151AD52057A48400C2E770 /* ChangePhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AD42057A48400C2E770 /* ChangePhoneNumberViewController.swift */; };
+		DE151AD92057A4FE00C2E770 /* PhoneNumberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE151AD72057A4FE00C2E770 /* PhoneNumberTableViewCell.xib */; };
+		DE151ADA2057A4FE00C2E770 /* PhoneNumberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AD82057A4FE00C2E770 /* PhoneNumberTableViewCell.swift */; };
+		DE151ADC2057A75800C2E770 /* DeleteAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151ADB2057A75800C2E770 /* DeleteAccountViewController.swift */; };
+		DE151AE02057A7C100C2E770 /* DeleteInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151ADE2057A7C100C2E770 /* DeleteInfoTableViewCell.swift */; };
+		DE151AE12057A7C100C2E770 /* DeleteInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE151ADF2057A7C100C2E770 /* DeleteInfoTableViewCell.xib */; };
+		DE151AE72057ABF900C2E770 /* JobListCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AE52057ABF900C2E770 /* JobListCellTableViewCell.swift */; };
+		DE151AE82057ABF900C2E770 /* JobListCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE151AE62057ABF900C2E770 /* JobListCellTableViewCell.xib */; };
 		DE46858A2050C98F007E2E85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4685892050C98F007E2E85 /* AppDelegate.swift */; };
 		DE46858F2050C98F007E2E85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE46858D2050C98F007E2E85 /* Main.storyboard */; };
 		DE4685922050C98F007E2E85 /* JobHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE4685902050C98F007E2E85 /* JobHub.xcdatamodeld */; };
@@ -51,6 +65,20 @@
 		DE151ABF2057689100C2E770 /* ChatListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListingViewController.swift; sourceTree = "<group>"; };
 		DE151AC1205768C400C2E770 /* SettingsLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLandingViewController.swift; sourceTree = "<group>"; };
 		DE151AC3205768F700C2E770 /* ContactsListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListingViewController.swift; sourceTree = "<group>"; };
+		DE151AC62057721B00C2E770 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		DE151AC72057721B00C2E770 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		DE151ACC20578A6F00C2E770 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		DE151ACE2057992300C2E770 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		DE151AD0205799C700C2E770 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Utilities/Constants.swift; sourceTree = "<group>"; };
+		DE151AD220579D3500C2E770 /* SelectPrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPrivacyViewController.swift; sourceTree = "<group>"; };
+		DE151AD42057A48400C2E770 /* ChangePhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePhoneNumberViewController.swift; sourceTree = "<group>"; };
+		DE151AD72057A4FE00C2E770 /* PhoneNumberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhoneNumberTableViewCell.xib; sourceTree = "<group>"; };
+		DE151AD82057A4FE00C2E770 /* PhoneNumberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberTableViewCell.swift; sourceTree = "<group>"; };
+		DE151ADB2057A75800C2E770 /* DeleteAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountViewController.swift; sourceTree = "<group>"; };
+		DE151ADE2057A7C100C2E770 /* DeleteInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteInfoTableViewCell.swift; sourceTree = "<group>"; };
+		DE151ADF2057A7C100C2E770 /* DeleteInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeleteInfoTableViewCell.xib; sourceTree = "<group>"; };
+		DE151AE52057ABF900C2E770 /* JobListCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobListCellTableViewCell.swift; path = Modules/Home/Views/TableViewCell/JobListCell/JobListCellTableViewCell.swift; sourceTree = "<group>"; };
+		DE151AE62057ABF900C2E770 /* JobListCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = JobListCellTableViewCell.xib; path = Modules/Home/Views/TableViewCell/JobListCell/JobListCellTableViewCell.xib; sourceTree = "<group>"; };
 		DE4685862050C98F007E2E85 /* JobHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4685892050C98F007E2E85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE46858E2050C98F007E2E85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,6 +175,7 @@
 		DE151AB4205767C400C2E770 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DE151AC52057720400C2E770 /* TableViewCell */,
 				DE151ABB205767F500C2E770 /* SettingsStoryboard.storyboard */,
 			);
 			path = View;
@@ -156,6 +185,11 @@
 			isa = PBXGroup;
 			children = (
 				DE151AC1205768C400C2E770 /* SettingsLandingViewController.swift */,
+				DE151ACC20578A6F00C2E770 /* AccountViewController.swift */,
+				DE151ACE2057992300C2E770 /* PrivacyViewController.swift */,
+				DE151AD220579D3500C2E770 /* SelectPrivacyViewController.swift */,
+				DE151AD42057A48400C2E770 /* ChangePhoneNumberViewController.swift */,
+				DE151ADB2057A75800C2E770 /* DeleteAccountViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,6 +208,44 @@
 				DE151AC3205768F700C2E770 /* ContactsListingViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE151AC52057720400C2E770 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DE151ADD2057A7C100C2E770 /* DeleteInfoCell */,
+				DE151AD62057A4FE00C2E770 /* PhoneNumberCell */,
+				DE151AC62057721B00C2E770 /* ProfileTableViewCell.swift */,
+				DE151AC72057721B00C2E770 /* ProfileTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		DE151AD62057A4FE00C2E770 /* PhoneNumberCell */ = {
+			isa = PBXGroup;
+			children = (
+				DE151AD72057A4FE00C2E770 /* PhoneNumberTableViewCell.xib */,
+				DE151AD82057A4FE00C2E770 /* PhoneNumberTableViewCell.swift */,
+			);
+			path = PhoneNumberCell;
+			sourceTree = "<group>";
+		};
+		DE151ADD2057A7C100C2E770 /* DeleteInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				DE151ADE2057A7C100C2E770 /* DeleteInfoTableViewCell.swift */,
+				DE151ADF2057A7C100C2E770 /* DeleteInfoTableViewCell.xib */,
+			);
+			path = DeleteInfoCell;
+			sourceTree = "<group>";
+		};
+		DE151AE22057AB9D00C2E770 /* JobListCell */ = {
+			isa = PBXGroup;
+			children = (
+				DE151AE52057ABF900C2E770 /* JobListCellTableViewCell.swift */,
+				DE151AE62057ABF900C2E770 /* JobListCellTableViewCell.xib */,
+			);
+			name = JobListCell;
 			sourceTree = "<group>";
 		};
 		DE46857D2050C98F007E2E85 = {
@@ -236,6 +308,7 @@
 				DE4685BB2050CE3D007E2E85 /* ActivityIndicatorManager.swift */,
 				DE4685BA2050CE3D007E2E85 /* AlertManager.swift */,
 				DE4685CB2050D075007E2E85 /* StoryboardHelper.swift */,
+				DE151AD0205799C700C2E770 /* Constants.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -304,6 +377,7 @@
 		DE58AB852052C9A000D5240A /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				DE151AE22057AB9D00C2E770 /* JobListCell */,
 				DE58AB8C2052D1F000D5240A /* JobTitle */,
 			);
 			name = TableViewCell;
@@ -390,13 +464,17 @@
 			files = (
 				DE4685972050C98F007E2E85 /* LaunchScreen.storyboard in Resources */,
 				DE46859F2050CB23007E2E85 /* GoogleService-Info.plist in Resources */,
+				DE151AE12057A7C100C2E770 /* DeleteInfoTableViewCell.xib in Resources */,
+				DE151AE82057ABF900C2E770 /* JobListCellTableViewCell.xib in Resources */,
 				DE58AB902052D20500D5240A /* JobFilterTableViewCell.xib in Resources */,
 				DE4685942050C98F007E2E85 /* Assets.xcassets in Resources */,
 				DE46858F2050C98F007E2E85 /* Main.storyboard in Resources */,
 				DE151ABE2057680200C2E770 /* ContactsStoryboard.storyboard in Resources */,
 				DE58AB7B2051ECE600D5240A /* HomeStoryboard.storyboard in Resources */,
+				DE151AD92057A4FE00C2E770 /* PhoneNumberTableViewCell.xib in Resources */,
 				DE151ABC205767F500C2E770 /* SettingsStoryboard.storyboard in Resources */,
 				DE151ABA205767E700C2E770 /* ChatStoryboard.storyboard in Resources */,
+				DE151AC92057721B00C2E770 /* ProfileTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,22 +555,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE151AD52057A48400C2E770 /* ChangePhoneNumberViewController.swift in Sources */,
 				DE151AC4205768F700C2E770 /* ContactsListingViewController.swift in Sources */,
 				DE4685C82050CFFA007E2E85 /* SearchViewController.swift in Sources */,
+				DE151ACD20578A6F00C2E770 /* AccountViewController.swift in Sources */,
+				DE151AC82057721B00C2E770 /* ProfileTableViewCell.swift in Sources */,
+				DE151ADC2057A75800C2E770 /* DeleteAccountViewController.swift in Sources */,
 				DE4685B72050CE2E007E2E85 /* NetworkConstants.swift in Sources */,
 				DE4685CE20510324007E2E85 /* UIViewHelper.swift in Sources */,
 				DE58AB812051F3A000D5240A /* TableViewHelper.swift in Sources */,
+				DE151AD1205799C700C2E770 /* Constants.swift in Sources */,
 				DE4685BD2050CE3D007E2E85 /* ActivityIndicatorManager.swift in Sources */,
 				DE4685BC2050CE3D007E2E85 /* AlertManager.swift in Sources */,
 				DE4685922050C98F007E2E85 /* JobHub.xcdatamodeld in Sources */,
+				DE151AD320579D3500C2E770 /* SelectPrivacyViewController.swift in Sources */,
 				DE151AC02057689100C2E770 /* ChatListingViewController.swift in Sources */,
 				DE4685CC2050D075007E2E85 /* StoryboardHelper.swift in Sources */,
 				DE58AB722051EBC400D5240A /* SignUpViewController.swift in Sources */,
 				DE58AB7D2051F16800D5240A /* JobIndustryViewController.swift in Sources */,
 				DE58AB83205276F100D5240A /* JobSearchViewController.swift in Sources */,
+				DE151AE72057ABF900C2E770 /* JobListCellTableViewCell.swift in Sources */,
 				DE58AB792051ECD000D5240A /* JobTitlesViewController.swift in Sources */,
 				DE58AB8F2052D20500D5240A /* JobFilterTableViewCell.swift in Sources */,
+				DE151AE02057A7C100C2E770 /* DeleteInfoTableViewCell.swift in Sources */,
+				DE151ACF2057992300C2E770 /* PrivacyViewController.swift in Sources */,
 				DE151AC2205768C400C2E770 /* SettingsLandingViewController.swift in Sources */,
+				DE151ADA2057A4FE00C2E770 /* PhoneNumberTableViewCell.swift in Sources */,
 				DE58AB7F2051F1AD00D5240A /* JobLocationViewController.swift in Sources */,
 				DE4685CA2050D01D007E2E85 /* DataAnalyticsViewController.swift in Sources */,
 				DE58AB922052F0CC00D5240A /* JobHomeViewController.swift in Sources */,

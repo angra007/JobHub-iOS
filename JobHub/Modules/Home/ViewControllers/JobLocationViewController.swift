@@ -33,7 +33,9 @@ class JobLocationViewController: UIViewController {
     @IBOutlet weak var selectedLocationLabel: UILabel!
     @IBAction func didTapNextButton(_ sender: UIButton) {
         let jobSearchViewController = UIStoryboard.homeStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.JobTabBarController.rawValue)
-        self.navigationController?.pushViewController(jobSearchViewController, animated: true)
+        self.navigationController?.isNavigationBarHidden = true
+        addChildController(childController: jobSearchViewController, inContentView: self.view)
+        //self.navigationController?.pushViewController(jobSearchViewController, animated: true)
     }
     
     

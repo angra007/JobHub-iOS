@@ -341,18 +341,18 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="znR-aU-Z32" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3188" y="34"/>
+            <point key="canvasLocation" x="2578" y="34"/>
         </scene>
         <!--Job Search View Controller-->
         <scene sceneID="75B-9d-26E">
             <objects>
-                <viewController storyboardIdentifier="jobSearchVC" id="cTd-vL-U9A" customClass="JobSearchViewController" customModule="JobHub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cTd-vL-U9A" customClass="JobSearchViewController" customModule="JobHub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="55B-9A-bTs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GCo-3s-t60">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -365,10 +365,29 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="56p-IR-cfK"/>
                     </view>
+                    <navigationItem key="navigationItem" id="bPM-jv-l05"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tom-II-tAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4425" y="-36"/>
+            <point key="canvasLocation" x="4238" y="34"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Afx-z8-OQ5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AB8-Dg-2ld" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="jobSearchVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OdC-ry-mse" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AHS-C2-H9y">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cTd-vL-U9A" kind="relationship" relationship="rootViewController" id="Hkg-0Z-FfA"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="3538" y="34"/>
         </scene>
     </scenes>
 </document>

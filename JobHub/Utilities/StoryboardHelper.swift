@@ -20,6 +20,11 @@ extension UIStoryboard {
         case ChatListingController = "chatListingVC"
         
         case SettingsLandingController = "settingLandingVC"
+        case AccountController = "accountVC"
+        case PrivacyController = "privacyVC"
+        case SelectPrivacyController = "selectPrivacyVC"
+        case ChangePhoneNumberController = "changePhoneNumberController"
+        case DeleteAccountController = "delectAccountVC"
         
         case ContactsListingController = "contactsListingController"
         
