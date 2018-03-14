@@ -9,8 +9,10 @@
 import UIKit
 
 class JobIndustryViewController: UIViewController {
+    
+    var selectedIndustry = [String] ()
 
-    @IBOutlet weak var selectedJobIndustryLabel: NSLayoutConstraint!
+    @IBOutlet weak var selectedJobIndustryLabel: UILabel!
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.delegate = self
@@ -18,6 +20,12 @@ class JobIndustryViewController: UIViewController {
             tableView.register(JobFilterTableViewCell.self)
         }
     }
+    
+    
+    let datasource = ["Accounting and Finance", "Administrative and Clerical", "Media and Entertainment", "Customer Service", "Engineering", "Environmental", "Financial Services", "Healthcare Services and Wellness", "Insurance", "Legal", "Manufacturing", "Sales and Business" , "Development"
+        ,"Science and research"
+        ,"Technology and Digital Media"
+        ,"Training and Education"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +39,8 @@ class JobIndustryViewController: UIViewController {
     }
     
     @IBAction func didTapNextButton(_ sender: UIButton) {
-        let jobTitleViewController = UIStoryboard.homeStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.JobTitleController.rawValue)
+        let jobTitleViewController = UIStoryboard.homeStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.JobTitleController.rawValue) as! JobTitlesViewController
+        jobTitleViewController.selectedIndustrys = self.selectedIndustry
         self.navigationController?.pushViewController(jobTitleViewController, animated: true)
     }
     
@@ -44,13 +53,29 @@ extension JobIndustryViewController : UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return datasource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : JobFilterTableViewCell = tableView.dequeuResuableCell(forIndexPath: indexPath)
-        cell.jobTitleLabel.text = "Ankit"
+        cell.jobTitleLabel.text = datasource [indexPath.row]
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let jobTitle = datasource[indexPath.row]
+        let cell = tableView.cellForRow(at: indexPath) as! JobFilterTableViewCell
+        
+        if selectedIndustry.contains(jobTitle) {
+            selectedIndustry.remove(at: selectedIndustry.index(of: jobTitle)!)
+            cell.jobTitleSelectedImageView.image = nil
+        }
+        else {
+            selectedIndustry.append(jobTitle)
+            cell.jobTitleSelectedImageView.image = UIImage.init(named: "ic_check_circle_white_")
+        }
+        self.selectedJobIndustryLabel.text = String (selectedIndustry.count) + " Job Titles Selected"
+    }
+    
 }
 

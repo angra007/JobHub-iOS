@@ -135,7 +135,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="lXG-VC-bDS"/>
                     <connections>
-                        <outlet property="selectedJobIndustryLabel" destination="BDg-64-pBg" id="Y7E-JR-uFY"/>
+                        <outlet property="selectedJobIndustryLabel" destination="wc0-wW-lJz" id="fMP-F0-aiD"/>
                         <outlet property="tableView" destination="9AN-99-7G4" id="IVt-A5-Uaf"/>
                     </connections>
                 </viewController>
@@ -404,7 +404,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Afx-z8-OQ5">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AB8-Dg-2ld" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="jobSearchVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OdC-ry-mse" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AHS-C2-H9y">
@@ -416,6 +415,7 @@
                         <segue destination="cTd-vL-U9A" kind="relationship" relationship="rootViewController" id="Hkg-0Z-FfA"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AB8-Dg-2ld" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3538" y="34"/>
         </scene>

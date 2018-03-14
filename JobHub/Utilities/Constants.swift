@@ -52,3 +52,26 @@ enum SelectPrivacyNavigationType {
         }
     }
 }
+
+enum ContactNavigationType {
+    case none
+    case block
+    
+    var title : String {
+        switch self {
+        case .none:
+            return "Contacts"
+        case .block:
+            return "Block Contact"
+        }
+    }
+    
+    var prefersLargeTitles : Bool {
+        switch self {
+        case .none:
+            return true
+        case .block:
+            return false
+        }
+    }
+}

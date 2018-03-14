@@ -10,6 +10,26 @@ import UIKit
 
 class JobLocationViewController: UIViewController {
 
+    var selectedIndustrys = [String] ()
+    var selectedTitles = [String] ()
+    var selectedLocations = [String] ()
+    
+    let datasource = ["Barrie",
+                      "Brampton",
+                      "Burlington",
+                      "Cambridge",
+                      "Guelph",
+                      "Hamilton",
+                      "Kitchener",
+                      "London",
+                      "North York",
+                      "Mississauga",
+                      "Ottawa",
+                      "Scarborough",
+                      "Toronto",
+                      "Vaughan",
+                      "Waterloo"]
+    
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.delegate = self
@@ -64,12 +84,28 @@ extension JobLocationViewController : UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return datasource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : JobFilterTableViewCell = tableView.dequeuResuableCell(forIndexPath: indexPath)
-        cell.jobTitleLabel.text = "Ankit"
+        cell.jobTitleLabel.text = datasource [indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let jobTitle = datasource[indexPath.row]
+        let cell = tableView.cellForRow(at: indexPath) as! JobFilterTableViewCell
+        
+        if selectedLocations.contains(jobTitle) {
+            selectedLocations.remove(at: selectedLocations.index(of: jobTitle)!)
+            cell.jobTitleSelectedImageView.image = nil
+        }
+        else {
+            selectedLocations.append(jobTitle)
+            cell.jobTitleSelectedImageView.image = UIImage.init(named: "ic_check_circle_white_")
+        }
+        
+        self.selectedLocationLabel.text =  String (selectedLocations.count)  + " Job Titles Selected"
     }
 }

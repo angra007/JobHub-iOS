@@ -41,6 +41,19 @@ class SignUpViewController: UIViewController {
             ActivityIndicatorManager.showActivityIndicator()
             NetworkManager.register(withEmail: email!, password: password!, completion: { (user) in
                 ActivityIndicatorManager.dismissActivityIndicator()
+                
+                if user != nil {
+                    var userDict = [String : String] ()
+                    userDict ["firstName"] = self.firstName
+                    userDict ["lastName"] = self.secondName
+                    userDict ["email"] = self.email
+                    
+                    NetworkManager.updateInformation(forRequestType: .profile, values: userDict as [String : AnyObject], completion: { (databaseReference) in
+                        let jobTitleViewController = UIStoryboard.homeStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.JobIndustryController.rawValue)
+                        let jobTitleNavigationController = UINavigationController.init(rootViewController: jobTitleViewController)
+                        self.navigationController?.present(jobTitleNavigationController, animated: true, completion: nil)
+                    })
+                }
             })
         }
     }
@@ -56,6 +69,7 @@ class SignUpViewController: UIViewController {
         self.passwordTextfield.delegate = self
         self.confirmPasswordTextField.delegate = self
        // self.navigationController?.isNavigationBarHidden = false
+        self.navigationItem.title = "Sign Up"
         // Do any additional setup after loading the view.
     }
 

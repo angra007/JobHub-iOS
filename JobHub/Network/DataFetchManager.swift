@@ -50,7 +50,7 @@ class NetworkManager {
     }
     
     class func updateInformation (forRequestType type : RequestType, values : [String : AnyObject], completion:  @escaping WebRequestCompletionHandler) {
-
+        print(values)
         type.reference.updateChildValues(values) { (error, databaseReference) in
             if error != nil {
                 handleAPIError()

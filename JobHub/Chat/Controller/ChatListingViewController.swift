@@ -45,10 +45,15 @@ extension ChatListingViewController : UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatListingTableViewCell", for: indexPath)
+        let cell : ChatListingTableViewCell = tableView.dequeuResuableCell(forIndexPath: indexPath)
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
+        cell.profileImage.image = UIImage(named : "user")
         return cell
-    }    
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 

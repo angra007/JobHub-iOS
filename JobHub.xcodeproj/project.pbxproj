@@ -31,6 +31,15 @@
 		DE151AEA2057AF3100C2E770 /* JobSearchListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AE92057AF3100C2E770 /* JobSearchListingViewController.swift */; };
 		DE151AF02057C33D00C2E770 /* ChatListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AEE2057C33D00C2E770 /* ChatListingTableViewCell.swift */; };
 		DE151AF12057C33D00C2E770 /* ChatListingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE151AEF2057C33D00C2E770 /* ChatListingTableViewCell.xib */; };
+		DE151AF62057C7F000C2E770 /* ContactListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AF42057C7EF00C2E770 /* ContactListTableViewCell.swift */; };
+		DE151AF72057C7F000C2E770 /* ContactListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE151AF52057C7EF00C2E770 /* ContactListTableViewCell.xib */; };
+		DE151AF92057C8F300C2E770 /* ContactSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AF82057C8F200C2E770 /* ContactSearchResultViewController.swift */; };
+		DE151AFB2057C98700C2E770 /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AFA2057C98700C2E770 /* ContactViewModel.swift */; };
+		DE151AFF2057CC2200C2E770 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AFD2057CC2200C2E770 /* Contact.swift */; };
+		DE151B002057CC2200C2E770 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AFE2057CC2200C2E770 /* Status.swift */; };
+		DE151B022057CC6200C2E770 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151B012057CC6100C2E770 /* CoreDataHelper.swift */; };
+		DE151B042057CE2800C2E770 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151B032057CE2800C2E770 /* StringHelper.swift */; };
+		DE151B0620584BC900C2E770 /* ContactProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151B0520584BC900C2E770 /* ContactProfileViewController.swift */; };
 		DE46858A2050C98F007E2E85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4685892050C98F007E2E85 /* AppDelegate.swift */; };
 		DE46858F2050C98F007E2E85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE46858D2050C98F007E2E85 /* Main.storyboard */; };
 		DE4685922050C98F007E2E85 /* JobHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE4685902050C98F007E2E85 /* JobHub.xcdatamodeld */; };
@@ -85,6 +94,15 @@
 		DE151AE92057AF3100C2E770 /* JobSearchListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobSearchListingViewController.swift; path = Modules/Home/ViewControllers/JobSearchListingViewController.swift; sourceTree = "<group>"; };
 		DE151AEE2057C33D00C2E770 /* ChatListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListingTableViewCell.swift; sourceTree = "<group>"; };
 		DE151AEF2057C33D00C2E770 /* ChatListingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatListingTableViewCell.xib; sourceTree = "<group>"; };
+		DE151AF42057C7EF00C2E770 /* ContactListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListTableViewCell.swift; sourceTree = "<group>"; };
+		DE151AF52057C7EF00C2E770 /* ContactListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactListTableViewCell.xib; sourceTree = "<group>"; };
+		DE151AF82057C8F200C2E770 /* ContactSearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactSearchResultViewController.swift; sourceTree = "<group>"; };
+		DE151AFA2057C98700C2E770 /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
+		DE151AFD2057CC2200C2E770 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = Models/Contact.swift; sourceTree = "<group>"; };
+		DE151AFE2057CC2200C2E770 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Status.swift; path = Models/Status.swift; sourceTree = "<group>"; };
+		DE151B012057CC6100C2E770 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = Utilities/CoreDataHelper.swift; sourceTree = "<group>"; };
+		DE151B032057CE2800C2E770 /* StringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
+		DE151B0520584BC900C2E770 /* ContactProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactProfileViewController.swift; sourceTree = "<group>"; };
 		DE4685862050C98F007E2E85 /* JobHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4685892050C98F007E2E85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE46858E2050C98F007E2E85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -204,6 +222,7 @@
 		DE151AB6205767CD00C2E770 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DE151AF22057C7DC00C2E770 /* TableViewCell */,
 				DE151ABD2057680200C2E770 /* ContactsStoryboard.storyboard */,
 			);
 			path = View;
@@ -212,7 +231,10 @@
 		DE151AB8205767D700C2E770 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DE151AF82057C8F200C2E770 /* ContactSearchResultViewController.swift */,
 				DE151AC3205768F700C2E770 /* ContactsListingViewController.swift */,
+				DE151AFA2057C98700C2E770 /* ContactViewModel.swift */,
+				DE151B0520584BC900C2E770 /* ContactProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -279,6 +301,32 @@
 			path = ChatListing;
 			sourceTree = "<group>";
 		};
+		DE151AF22057C7DC00C2E770 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DE151AF32057C7EF00C2E770 /* Contact List */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		DE151AF32057C7EF00C2E770 /* Contact List */ = {
+			isa = PBXGroup;
+			children = (
+				DE151AF42057C7EF00C2E770 /* ContactListTableViewCell.swift */,
+				DE151AF52057C7EF00C2E770 /* ContactListTableViewCell.xib */,
+			);
+			path = "Contact List";
+			sourceTree = "<group>";
+		};
+		DE151AFC2057CBFC00C2E770 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE151AFD2057CC2200C2E770 /* Contact.swift */,
+				DE151AFE2057CC2200C2E770 /* Status.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		DE46857D2050C98F007E2E85 = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +348,7 @@
 		DE4685882050C98F007E2E85 /* JobHub */ = {
 			isa = PBXGroup;
 			children = (
+				DE151AFC2057CBFC00C2E770 /* Models */,
 				DE4685BE2050CEEB007E2E85 /* Module */,
 				DE4685B92050CE32007E2E85 /* Utilities */,
 				DE4685B42050CE23007E2E85 /* Network */,
@@ -334,12 +383,14 @@
 		DE4685B92050CE32007E2E85 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DE151B012057CC6100C2E770 /* CoreDataHelper.swift */,
 				DE58AB802051F3A000D5240A /* TableViewHelper.swift */,
 				DE4685CD20510324007E2E85 /* UIViewHelper.swift */,
 				DE4685BB2050CE3D007E2E85 /* ActivityIndicatorManager.swift */,
 				DE4685BA2050CE3D007E2E85 /* AlertManager.swift */,
 				DE4685CB2050D075007E2E85 /* StoryboardHelper.swift */,
 				DE151AD0205799C700C2E770 /* Constants.swift */,
+				DE151B032057CE2800C2E770 /* StringHelper.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -495,6 +546,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE151AF72057C7F000C2E770 /* ContactListTableViewCell.xib in Resources */,
 				DE4685972050C98F007E2E85 /* LaunchScreen.storyboard in Resources */,
 				DE46859F2050CB23007E2E85 /* GoogleService-Info.plist in Resources */,
 				DE151AE12057A7C100C2E770 /* DeleteInfoTableViewCell.xib in Resources */,
@@ -595,17 +647,23 @@
 				DE151ACD20578A6F00C2E770 /* AccountViewController.swift in Sources */,
 				DE151AC82057721B00C2E770 /* ProfileTableViewCell.swift in Sources */,
 				DE151ADC2057A75800C2E770 /* DeleteAccountViewController.swift in Sources */,
+				DE151AF62057C7F000C2E770 /* ContactListTableViewCell.swift in Sources */,
+				DE151B0620584BC900C2E770 /* ContactProfileViewController.swift in Sources */,
 				DE4685B72050CE2E007E2E85 /* NetworkConstants.swift in Sources */,
 				DE4685CE20510324007E2E85 /* UIViewHelper.swift in Sources */,
 				DE151AF02057C33D00C2E770 /* ChatListingTableViewCell.swift in Sources */,
+				DE151B022057CC6200C2E770 /* CoreDataHelper.swift in Sources */,
 				DE58AB812051F3A000D5240A /* TableViewHelper.swift in Sources */,
 				DE151AD1205799C700C2E770 /* Constants.swift in Sources */,
 				DE4685BD2050CE3D007E2E85 /* ActivityIndicatorManager.swift in Sources */,
 				DE4685BC2050CE3D007E2E85 /* AlertManager.swift in Sources */,
+				DE151AF92057C8F300C2E770 /* ContactSearchResultViewController.swift in Sources */,
 				DE4685922050C98F007E2E85 /* JobHub.xcdatamodeld in Sources */,
 				DE151AD320579D3500C2E770 /* SelectPrivacyViewController.swift in Sources */,
 				DE151AC02057689100C2E770 /* ChatListingViewController.swift in Sources */,
 				DE4685CC2050D075007E2E85 /* StoryboardHelper.swift in Sources */,
+				DE151AFB2057C98700C2E770 /* ContactViewModel.swift in Sources */,
+				DE151AFF2057CC2200C2E770 /* Contact.swift in Sources */,
 				DE58AB722051EBC400D5240A /* SignUpViewController.swift in Sources */,
 				DE58AB7D2051F16800D5240A /* JobIndustryViewController.swift in Sources */,
 				DE58AB83205276F100D5240A /* JobSearchViewController.swift in Sources */,
@@ -620,9 +678,11 @@
 				DE58AB7F2051F1AD00D5240A /* JobLocationViewController.swift in Sources */,
 				DE4685CA2050D01D007E2E85 /* DataAnalyticsViewController.swift in Sources */,
 				DE58AB922052F0CC00D5240A /* JobHomeViewController.swift in Sources */,
+				DE151B002057CC2200C2E770 /* Status.swift in Sources */,
 				DE46858A2050C98F007E2E85 /* AppDelegate.swift in Sources */,
 				DE58AB712051EBC400D5240A /* LoginViewController.swift in Sources */,
 				DE4685B82050CE2E007E2E85 /* DataFetchManager.swift in Sources */,
+				DE151B042057CE2800C2E770 /* StringHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

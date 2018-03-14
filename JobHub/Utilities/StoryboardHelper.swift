@@ -28,7 +28,8 @@ extension UIStoryboard {
         case DeleteAccountController = "delectAccountVC"
         
         case ContactsListingController = "contactsListingController"
-        
+        case ContactsSearchResultController = "contactSearchResultVC"
+        case ContactProfileController = "contactProfileVC"
     }
     // LoginStoryboard
     class func mainStoryboard() -> UIStoryboard {
