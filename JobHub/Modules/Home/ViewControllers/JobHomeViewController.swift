@@ -18,19 +18,22 @@ class JobHomeViewController: UITabBarController {
         let chatViewController = UIStoryboard.chatStoryboard().instantiateInitialViewController()!
         let contactsController = UIStoryboard.contactsStoryboard().instantiateInitialViewController()!
         let settingLandingController = UIStoryboard.settingsStoryboard().instantiateInitialViewController()!
+        let peopleController = UIStoryboard.peopleStoryboard().instantiateInitialViewController()!
         
         
         let tabOneBarItem1 = UITabBarItem.init(title: "Home", image: UIImage(named : "home"), tag: 0)
         let tabOneBarItem2 = UITabBarItem.init(title: "Chat", image: UIImage(named : "chat"), tag: 0)
         let tabOneBarItem3 = UITabBarItem.init(title: "Contacts", image: UIImage(named : "contacts"), tag: 0)
         let tabOneBarItem4 = UITabBarItem.init(title: "Settings", image: UIImage(named : "settings"), tag: 0)
+        let tabOneBarItem5 = UITabBarItem.init(title: "People", image: UIImage(named : "people"), tag: 0)
         
         jobSearchViewController.tabBarItem = tabOneBarItem1
         chatViewController.tabBarItem = tabOneBarItem2
         contactsController.tabBarItem = tabOneBarItem3
         settingLandingController.tabBarItem = tabOneBarItem4
+        peopleController.tabBarItem = tabOneBarItem5
         //
-        self.viewControllers = [jobSearchViewController, chatViewController, contactsController, settingLandingController]
+        self.viewControllers = [jobSearchViewController, chatViewController, contactsController,peopleController, settingLandingController]
         
     }
     

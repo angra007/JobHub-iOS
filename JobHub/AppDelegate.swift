@@ -33,6 +33,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.sharedManager().enableAutoToolbar = true
         IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
         IQKeyboardManager.sharedManager().keyboardDistanceFromTextField = 50.0
+        
+  
+        
+        var isLoggedIn = false
+        
+        if Auth.auth().currentUser != nil {
+            isLoggedIn = true
+        }
+        var vc : UIViewController!
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.makeKeyAndVisible()
+        self.window?.backgroundColor = UIColor.white
+        if isLoggedIn == false {
+            vc = UIStoryboard.mainStoryboard().instantiateInitialViewController()
+        }
+        else {
+            vc = UIStoryboard.homeStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.JobTabBarController.rawValue)
+        }
+       
+        UIApplication.shared.keyWindow?.rootViewController = vc
+        
         return true
     }
 

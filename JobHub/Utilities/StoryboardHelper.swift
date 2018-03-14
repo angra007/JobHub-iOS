@@ -30,6 +30,8 @@ extension UIStoryboard {
         case ContactsListingController = "contactsListingController"
         case ContactsSearchResultController = "contactSearchResultVC"
         case ContactProfileController = "contactProfileVC"
+        
+        case PeopleSearchResultController = "peopleSearchResultController"
     }
     // LoginStoryboard
     class func mainStoryboard() -> UIStoryboard {
@@ -50,6 +52,10 @@ extension UIStoryboard {
     
     class func contactsStoryboard () -> UIStoryboard {
         return UIStoryboard(name: "ContactsStoryboard", bundle: Bundle.main)
+    }
+    
+    class func peopleStoryboard () -> UIStoryboard {
+        return UIStoryboard(name: "PeopleStoryboard", bundle: Bundle.main)
     }
 
 }

@@ -54,6 +54,13 @@
 		DE4685CA2050D01D007E2E85 /* DataAnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4685C92050D01D007E2E85 /* DataAnalyticsViewController.swift */; };
 		DE4685CC2050D075007E2E85 /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4685CB2050D075007E2E85 /* StoryboardHelper.swift */; };
 		DE4685CE20510324007E2E85 /* UIViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4685CD20510324007E2E85 /* UIViewHelper.swift */; };
+		DE5569362058DC1B006E52BF /* AddContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5569342058DC1B006E52BF /* AddContactTableViewCell.swift */; };
+		DE5569372058DC1B006E52BF /* AddContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE5569352058DC1B006E52BF /* AddContactTableViewCell.xib */; };
+		DE55693C2058F1DA006E52BF /* PeopleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE55693B2058F1DA006E52BF /* PeopleStoryboard.storyboard */; };
+		DE55693E2058F207006E52BF /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE55693D2058F207006E52BF /* PeopleViewController.swift */; };
+		DE5569432058F3FA006E52BF /* PeopleListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5569412058F3FA006E52BF /* PeopleListingTableViewCell.swift */; };
+		DE5569442058F3FA006E52BF /* PeopleListingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE5569422058F3FA006E52BF /* PeopleListingTableViewCell.xib */; };
+		DE5569462058F7F6006E52BF /* PeopleSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5569452058F7F6006E52BF /* PeopleSearchResultViewController.swift */; };
 		DE58AB712051EBC400D5240A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58AB6F2051EBC400D5240A /* LoginViewController.swift */; };
 		DE58AB722051EBC400D5240A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58AB702051EBC400D5240A /* SignUpViewController.swift */; };
 		DE58AB792051ECD000D5240A /* JobTitlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58AB782051ECCF00D5240A /* JobTitlesViewController.swift */; };
@@ -119,6 +126,13 @@
 		DE4685C92050D01D007E2E85 /* DataAnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataAnalyticsViewController.swift; path = Modules/ViewController/DataAnalyticsViewController.swift; sourceTree = "<group>"; };
 		DE4685CB2050D075007E2E85 /* StoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoryboardHelper.swift; path = Utilities/StoryboardHelper.swift; sourceTree = "<group>"; };
 		DE4685CD20510324007E2E85 /* UIViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewHelper.swift; path = Utilities/UIViewHelper.swift; sourceTree = "<group>"; };
+		DE5569342058DC1B006E52BF /* AddContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactTableViewCell.swift; sourceTree = "<group>"; };
+		DE5569352058DC1B006E52BF /* AddContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddContactTableViewCell.xib; sourceTree = "<group>"; };
+		DE55693B2058F1DA006E52BF /* PeopleStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PeopleStoryboard.storyboard; sourceTree = "<group>"; };
+		DE55693D2058F207006E52BF /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		DE5569412058F3FA006E52BF /* PeopleListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListingTableViewCell.swift; sourceTree = "<group>"; };
+		DE5569422058F3FA006E52BF /* PeopleListingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleListingTableViewCell.xib; sourceTree = "<group>"; };
+		DE5569452058F7F6006E52BF /* PeopleSearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleSearchResultViewController.swift; sourceTree = "<group>"; };
 		DE58AB6F2051EBC400D5240A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Modules/Login/LoginViewController.swift; sourceTree = "<group>"; };
 		DE58AB702051EBC400D5240A /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Modules/Login/SignUpViewController.swift; sourceTree = "<group>"; };
 		DE58AB782051ECCF00D5240A /* JobTitlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobTitlesViewController.swift; path = Modules/Home/ViewControllers/JobTitlesViewController.swift; sourceTree = "<group>"; };
@@ -304,6 +318,7 @@
 		DE151AF22057C7DC00C2E770 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				DE5569332058DBF8006E52BF /* AddContact */,
 				DE151AF32057C7EF00C2E770 /* Contact List */,
 			);
 			path = TableViewCell;
@@ -398,6 +413,7 @@
 		DE4685BE2050CEEB007E2E85 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				DE5569382058F1BF006E52BF /* People */,
 				DE151AB1205767AC00C2E770 /* Contacts */,
 				DE151AAF2057679400C2E770 /* Settings */,
 				DE151AAE2057678A00C2E770 /* Chat */,
@@ -407,6 +423,59 @@
 				DE4685C92050D01D007E2E85 /* DataAnalyticsViewController.swift */,
 			);
 			name = Module;
+			sourceTree = "<group>";
+		};
+		DE5569332058DBF8006E52BF /* AddContact */ = {
+			isa = PBXGroup;
+			children = (
+				DE5569342058DC1B006E52BF /* AddContactTableViewCell.swift */,
+				DE5569352058DC1B006E52BF /* AddContactTableViewCell.xib */,
+			);
+			path = AddContact;
+			sourceTree = "<group>";
+		};
+		DE5569382058F1BF006E52BF /* People */ = {
+			isa = PBXGroup;
+			children = (
+				DE55693A2058F1CA006E52BF /* Controller */,
+				DE5569392058F1C5006E52BF /* View */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
+		DE5569392058F1C5006E52BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE55693F2058F3D7006E52BF /* TableView */,
+				DE55693B2058F1DA006E52BF /* PeopleStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE55693A2058F1CA006E52BF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE55693D2058F207006E52BF /* PeopleViewController.swift */,
+				DE5569452058F7F6006E52BF /* PeopleSearchResultViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE55693F2058F3D7006E52BF /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DE5569402058F3DD006E52BF /* PeopleListingCell */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		DE5569402058F3DD006E52BF /* PeopleListingCell */ = {
+			isa = PBXGroup;
+			children = (
+				DE5569412058F3FA006E52BF /* PeopleListingTableViewCell.swift */,
+				DE5569422058F3FA006E52BF /* PeopleListingTableViewCell.xib */,
+			);
+			path = PeopleListingCell;
 			sourceTree = "<group>";
 		};
 		DE58AB6E2051EBA400D5240A /* Login */ = {
@@ -550,6 +619,7 @@
 				DE4685972050C98F007E2E85 /* LaunchScreen.storyboard in Resources */,
 				DE46859F2050CB23007E2E85 /* GoogleService-Info.plist in Resources */,
 				DE151AE12057A7C100C2E770 /* DeleteInfoTableViewCell.xib in Resources */,
+				DE5569372058DC1B006E52BF /* AddContactTableViewCell.xib in Resources */,
 				DE151AE82057ABF900C2E770 /* JobListCellTableViewCell.xib in Resources */,
 				DE58AB902052D20500D5240A /* JobFilterTableViewCell.xib in Resources */,
 				DE4685942050C98F007E2E85 /* Assets.xcassets in Resources */,
@@ -559,8 +629,10 @@
 				DE151AD92057A4FE00C2E770 /* PhoneNumberTableViewCell.xib in Resources */,
 				DE151ABC205767F500C2E770 /* SettingsStoryboard.storyboard in Resources */,
 				DE151ABA205767E700C2E770 /* ChatStoryboard.storyboard in Resources */,
+				DE55693C2058F1DA006E52BF /* PeopleStoryboard.storyboard in Resources */,
 				DE151AF12057C33D00C2E770 /* ChatListingTableViewCell.xib in Resources */,
 				DE151AC92057721B00C2E770 /* ProfileTableViewCell.xib in Resources */,
+				DE5569442058F3FA006E52BF /* PeopleListingTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +724,7 @@
 				DE4685B72050CE2E007E2E85 /* NetworkConstants.swift in Sources */,
 				DE4685CE20510324007E2E85 /* UIViewHelper.swift in Sources */,
 				DE151AF02057C33D00C2E770 /* ChatListingTableViewCell.swift in Sources */,
+				DE5569362058DC1B006E52BF /* AddContactTableViewCell.swift in Sources */,
 				DE151B022057CC6200C2E770 /* CoreDataHelper.swift in Sources */,
 				DE58AB812051F3A000D5240A /* TableViewHelper.swift in Sources */,
 				DE151AD1205799C700C2E770 /* Constants.swift in Sources */,
@@ -665,6 +738,7 @@
 				DE151AFB2057C98700C2E770 /* ContactViewModel.swift in Sources */,
 				DE151AFF2057CC2200C2E770 /* Contact.swift in Sources */,
 				DE58AB722051EBC400D5240A /* SignUpViewController.swift in Sources */,
+				DE55693E2058F207006E52BF /* PeopleViewController.swift in Sources */,
 				DE58AB7D2051F16800D5240A /* JobIndustryViewController.swift in Sources */,
 				DE58AB83205276F100D5240A /* JobSearchViewController.swift in Sources */,
 				DE151AE72057ABF900C2E770 /* JobListCellTableViewCell.swift in Sources */,
@@ -681,7 +755,9 @@
 				DE151B002057CC2200C2E770 /* Status.swift in Sources */,
 				DE46858A2050C98F007E2E85 /* AppDelegate.swift in Sources */,
 				DE58AB712051EBC400D5240A /* LoginViewController.swift in Sources */,
+				DE5569462058F7F6006E52BF /* PeopleSearchResultViewController.swift in Sources */,
 				DE4685B82050CE2E007E2E85 /* DataFetchManager.swift in Sources */,
+				DE5569432058F3FA006E52BF /* PeopleListingTableViewCell.swift in Sources */,
 				DE151B042057CE2800C2E770 /* StringHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

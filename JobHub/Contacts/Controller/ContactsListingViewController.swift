@@ -29,6 +29,7 @@ class ContactsListingViewController: UIViewController {
             tableView.delegate = self
             tableView.dataSource = self
             tableView.register(ContactListTableViewCell.self)
+            tableView.register(AddContactTableViewCell.self)
         }
     }
     
