@@ -13,8 +13,43 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
   
-    @IBAction func didTapOnForgotPassword(_ sender: UIButton) {
+    func textFieldHandler(textField: UITextField!)
+    {
+        if (textField) != nil {
+            textField.placeholder = "Email"
+            textField.keyboardType = .emailAddress
+        }
+    }
     
+    @IBAction func didTapOnForgotPassword(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Forgot your password?", message: "We will send a recovery email to your registered email address. Please enter your email address", preferredStyle:
+            UIAlertControllerStyle.alert)
+        
+        alert.addTextField(configurationHandler: textFieldHandler)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler:{ (UIAlertAction)in
+            let emailTextfield = alert.textFields![0] as UITextField
+            
+            if let email = emailTextfield.text {
+                ActivityIndicatorManager.showActivityIndicator()
+                NetworkManager.forgotPassword(withEmail: email, completion: { (error) in
+                    ActivityIndicatorManager.dismissActivityIndicator()
+                    if error == nil {
+                        AlertManager.showAlert(inViewController: self, withTitle: "", message: "Recovery link sent successfully")
+                    }
+                    else {
+                        AlertManager.showAlert(inViewController: self, withTitle: "", message: "Something went wrong. Please try again.")
+                    }
+                })
+            }
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler:{ (UIAlertAction)in
+            
+            
+        }))
+        
+        self.present(alert, animated: true, completion:nil)
     }
     
     @IBAction func didTapLoginButton(_ sender: UIButton) {
@@ -31,8 +66,7 @@ class LoginViewController: UIViewController {
                 ActivityIndicatorManager.dismissActivityIndicator(fromView: self.view)
 
                 let jobTabViewController = UIStoryboard.homeStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.JobTabBarController.rawValue)
-                let jobTitleNavigationController = UINavigationController.init(rootViewController: jobTabViewController)
-                self.navigationController?.present(jobTitleNavigationController, animated: true, completion: nil)
+                self.navigationController?.present(jobTabViewController, animated: true, completion: nil)
                 
             })
         }

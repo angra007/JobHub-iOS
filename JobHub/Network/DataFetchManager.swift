@@ -37,6 +37,20 @@ class NetworkManager {
         }
     }
     
+    class func forgotPassword (withEmail email : String, completion:  @escaping WebRequestCompletionHandler) {
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            // Your code here
+            if error != nil {
+                handleAPIError(withString: error!.localizedDescription)
+                completion (error)
+            }
+            else {
+                completion (nil)
+            }
+        }
+    }
+    
+    
     class func register (withEmail email : String, password : String, completion:  @escaping WebRequestCompletionHandler) {
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if error != nil {
