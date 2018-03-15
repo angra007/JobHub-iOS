@@ -21,6 +21,8 @@ class JobSearchViewController: UIViewController {
     var searchController : UISearchController!
     var searchResultController : JobSearchListingViewController!
     
+    let jobViewModel = JobsViewModel.init()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +37,12 @@ class JobSearchViewController: UIViewController {
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 90
+        
+        ActivityIndicatorManager.showActivityIndicator()
+        jobViewModel.loadAll { (response) in
+            ActivityIndicatorManager.dismissActivityIndicator()
+            self.tableView.reloadData()
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -94,11 +102,22 @@ extension JobSearchViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return jobViewModel.getJobCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "JobListCellTableViewCell", for: indexPath)
+        let cell : JobListCellTableViewCell = tableView.dequeuResuableCell(forIndexPath: indexPath)
+        
+        let job = jobViewModel.getJob(atIndex: indexPath.row)
+        cell.jobTitle.text = job.jobTitle
+        cell.company.text = job.company
+        cell.cityLabel.text = job.city
+        cell.countryLabel.text = job.country
+        cell.phoneNumberLabel.text = job.phoneNumber
+        cell.emailLabel.text = job.email
+        cell.salaryLabel.text = job.salary
+        cell.experienceLabel.text = String (job.requiredExperience) + " years"
+        
         return cell
     }
     

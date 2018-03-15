@@ -61,6 +61,9 @@
 		DE5569432058F3FA006E52BF /* PeopleListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5569412058F3FA006E52BF /* PeopleListingTableViewCell.swift */; };
 		DE5569442058F3FA006E52BF /* PeopleListingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE5569422058F3FA006E52BF /* PeopleListingTableViewCell.xib */; };
 		DE5569462058F7F6006E52BF /* PeopleSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5569452058F7F6006E52BF /* PeopleSearchResultViewController.swift */; };
+		DE5569482058FE7E006E52BF /* Jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5569472058FE7E006E52BF /* Jobs.swift */; };
+		DE55694C2059628D006E52BF /* JobHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE55694B2059628D006E52BF /* JobHelper.swift */; };
+		DE55694E2059A9EC006E52BF /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE55694D2059A9EC006E52BF /* RegistrationViewController.swift */; };
 		DE58AB712051EBC400D5240A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58AB6F2051EBC400D5240A /* LoginViewController.swift */; };
 		DE58AB722051EBC400D5240A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58AB702051EBC400D5240A /* SignUpViewController.swift */; };
 		DE58AB792051ECD000D5240A /* JobTitlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58AB782051ECCF00D5240A /* JobTitlesViewController.swift */; };
@@ -133,6 +136,9 @@
 		DE5569412058F3FA006E52BF /* PeopleListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListingTableViewCell.swift; sourceTree = "<group>"; };
 		DE5569422058F3FA006E52BF /* PeopleListingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleListingTableViewCell.xib; sourceTree = "<group>"; };
 		DE5569452058F7F6006E52BF /* PeopleSearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleSearchResultViewController.swift; sourceTree = "<group>"; };
+		DE5569472058FE7E006E52BF /* Jobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Jobs.swift; path = Models/Jobs.swift; sourceTree = "<group>"; };
+		DE55694B2059628D006E52BF /* JobHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobHelper.swift; sourceTree = "<group>"; };
+		DE55694D2059A9EC006E52BF /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistrationViewController.swift; path = Modules/Login/RegistrationViewController.swift; sourceTree = "<group>"; };
 		DE58AB6F2051EBC400D5240A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Modules/Login/LoginViewController.swift; sourceTree = "<group>"; };
 		DE58AB702051EBC400D5240A /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Modules/Login/SignUpViewController.swift; sourceTree = "<group>"; };
 		DE58AB782051ECCF00D5240A /* JobTitlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobTitlesViewController.swift; path = Modules/Home/ViewControllers/JobTitlesViewController.swift; sourceTree = "<group>"; };
@@ -338,6 +344,7 @@
 			children = (
 				DE151AFD2057CC2200C2E770 /* Contact.swift */,
 				DE151AFE2057CC2200C2E770 /* Status.swift */,
+				DE5569472058FE7E006E52BF /* Jobs.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -363,6 +370,7 @@
 		DE4685882050C98F007E2E85 /* JobHub */ = {
 			isa = PBXGroup;
 			children = (
+				DE55694A20596275006E52BF /* ModelHelpers */,
 				DE151AFC2057CBFC00C2E770 /* Models */,
 				DE4685BE2050CEEB007E2E85 /* Module */,
 				DE4685B92050CE32007E2E85 /* Utilities */,
@@ -478,11 +486,20 @@
 			path = PeopleListingCell;
 			sourceTree = "<group>";
 		};
+		DE55694A20596275006E52BF /* ModelHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				DE55694B2059628D006E52BF /* JobHelper.swift */,
+			);
+			path = ModelHelpers;
+			sourceTree = "<group>";
+		};
 		DE58AB6E2051EBA400D5240A /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				DE58AB6F2051EBC400D5240A /* LoginViewController.swift */,
 				DE58AB702051EBC400D5240A /* SignUpViewController.swift */,
+				DE55694D2059A9EC006E52BF /* RegistrationViewController.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -734,6 +751,7 @@
 				DE4685922050C98F007E2E85 /* JobHub.xcdatamodeld in Sources */,
 				DE151AD320579D3500C2E770 /* SelectPrivacyViewController.swift in Sources */,
 				DE151AC02057689100C2E770 /* ChatListingViewController.swift in Sources */,
+				DE55694C2059628D006E52BF /* JobHelper.swift in Sources */,
 				DE4685CC2050D075007E2E85 /* StoryboardHelper.swift in Sources */,
 				DE151AFB2057C98700C2E770 /* ContactViewModel.swift in Sources */,
 				DE151AFF2057CC2200C2E770 /* Contact.swift in Sources */,
@@ -751,8 +769,10 @@
 				DE151ADA2057A4FE00C2E770 /* PhoneNumberTableViewCell.swift in Sources */,
 				DE58AB7F2051F1AD00D5240A /* JobLocationViewController.swift in Sources */,
 				DE4685CA2050D01D007E2E85 /* DataAnalyticsViewController.swift in Sources */,
+				DE55694E2059A9EC006E52BF /* RegistrationViewController.swift in Sources */,
 				DE58AB922052F0CC00D5240A /* JobHomeViewController.swift in Sources */,
 				DE151B002057CC2200C2E770 /* Status.swift in Sources */,
+				DE5569482058FE7E006E52BF /* Jobs.swift in Sources */,
 				DE46858A2050C98F007E2E85 /* AppDelegate.swift in Sources */,
 				DE58AB712051EBC400D5240A /* LoginViewController.swift in Sources */,
 				DE5569462058F7F6006E52BF /* PeopleSearchResultViewController.swift in Sources */,

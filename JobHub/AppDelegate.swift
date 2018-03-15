@@ -35,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.sharedManager().keyboardDistanceFromTextField = 50.0
         
   
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        print(urls[urls.count-1] as URL)
         
         var isLoggedIn = false
         
@@ -53,6 +55,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             vc = UIStoryboard.homeStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.JobTabBarController.rawValue)
         }
        
+        
+        let userDefaults = UserDefaults.standard
+        if userDefaults.value(forKey: "appFirstTimeOpend") == nil {
+            //if app is first time opened then it will be nil
+            userDefaults.setValue(true, forKey: "appFirstTimeOpend")
+            // signOut from FIRAuth
+            do {
+                try Auth.auth().signOut()
+            }catch {
+                
+            }
+            // go to beginning of app
+        } else {
+            //go to where you want
+        }
+        
         UIApplication.shared.keyWindow?.rootViewController = vc
         
         return true

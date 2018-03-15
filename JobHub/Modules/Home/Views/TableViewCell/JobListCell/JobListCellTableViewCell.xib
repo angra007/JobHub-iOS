@@ -113,6 +113,16 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cityLabel" destination="iSi-g9-Tk5" id="2lc-Xi-SKT"/>
+                <outlet property="company" destination="dwl-fw-pLH" id="0PE-EO-TpD"/>
+                <outlet property="countryLabel" destination="Lju-GE-HIr" id="gNu-Be-fAd"/>
+                <outlet property="emailLabel" destination="5EF-Bh-Gk0" id="m4v-yo-w02"/>
+                <outlet property="experienceLabel" destination="nOp-Cz-wah" id="EIS-Gm-0nf"/>
+                <outlet property="jobTitle" destination="KXm-fG-sd2" id="pCd-Y9-T8d"/>
+                <outlet property="phoneNumberLabel" destination="7TB-Ax-6GW" id="4yr-64-g4J"/>
+                <outlet property="salaryLabel" destination="GIr-h0-VQy" id="vHb-MZ-C51"/>
+            </connections>
             <point key="canvasLocation" x="34" y="87"/>
         </tableViewCell>
     </objects>

@@ -43,16 +43,23 @@ class SignUpViewController: UIViewController {
                 ActivityIndicatorManager.dismissActivityIndicator()
                 
                 if user != nil {
-                    var userDict = [String : String] ()
-                    userDict ["firstName"] = self.firstName
-                    userDict ["lastName"] = self.secondName
-                    userDict ["email"] = self.email
+                    var userDict = [String : AnyObject] ()
+                    userDict ["firstName"] = self.firstName as AnyObject
+                    userDict ["lastName"] = self.secondName as AnyObject
+                    userDict ["email"] = self.email as AnyObject
                     
-                    NetworkManager.updateInformation(forRequestType: .profile, values: userDict as [String : AnyObject], completion: { (databaseReference) in
-                        let jobTitleViewController = UIStoryboard.homeStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.JobIndustryController.rawValue)
-                        let jobTitleNavigationController = UINavigationController.init(rootViewController: jobTitleViewController)
-                        self.navigationController?.present(jobTitleNavigationController, animated: true, completion: nil)
-                    })
+
+                    let registrationController = UIStoryboard.mainStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.RegistrationController.rawValue) as! RegistrationViewController
+                    registrationController.userDict = userDict
+                    
+                    let jobTitleNavigationController = UINavigationController.init(rootViewController: registrationController)
+                    self.navigationController?.present(jobTitleNavigationController, animated: true, completion: nil)
+                    
+//                    self.navigationController?.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: <#T##Bool#>)
+                    
+                    
+                    
+
                 }
             })
         }

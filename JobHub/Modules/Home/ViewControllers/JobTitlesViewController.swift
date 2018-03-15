@@ -18,7 +18,7 @@ class JobTitlesViewController: UIViewController {
         }
     }
     
-    var selectedIndustrys = [String] ()
+    var userDict : [String : AnyObject]!
     var selectedTitles = [String] ()
     
     let datasource = ["Accounting Anaylst",
@@ -50,8 +50,8 @@ class JobTitlesViewController: UIViewController {
     
     @IBAction func didTapNextButton(_ sender: UIButton) {
         let jobLocationViewController = UIStoryboard.homeStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.JobLocationController.rawValue) as! JobLocationViewController
-        jobLocationViewController.selectedTitles = self.selectedTitles
-        jobLocationViewController.selectedIndustrys = self.selectedIndustrys
+        userDict ["selectedTitles"] = self.selectedTitles as AnyObject
+        jobLocationViewController.userDict = userDict
         self.navigationController?.pushViewController(jobLocationViewController, animated: true)
     }
 

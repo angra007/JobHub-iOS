@@ -47,7 +47,7 @@ class PeopleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpSearchBar()
+        //setUpSearchBar()
         
         self.navigationItem.title = "People"
         self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -81,6 +81,7 @@ extension PeopleViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : PeopleListingTableViewCell = tableView.dequeuResuableCell(forIndexPath: indexPath)
+        cell.delegate = self
         return cell
     }
 }

@@ -10,9 +10,10 @@ import UIKit
 
 class JobLocationViewController: UIViewController {
 
-    var selectedIndustrys = [String] ()
-    var selectedTitles = [String] ()
+
     var selectedLocations = [String] ()
+    
+    var userDict : [String : AnyObject]!
     
     let datasource = ["Barrie",
                       "Brampton",
@@ -38,24 +39,19 @@ class JobLocationViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    
     @IBOutlet weak var selectedLocationLabel: UILabel!
     @IBAction func didTapNextButton(_ sender: UIButton) {
-        let jobSearchViewController = UIStoryboard.homeStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.JobTabBarController.rawValue)
-        self.navigationController?.isNavigationBarHidden = true
-        addChildController(childController: jobSearchViewController, inContentView: self.view)
-        //self.navigationController?.pushViewController(jobSearchViewController, animated: true)
+        
+        userDict ["intrestLocation"] = self.selectedLocations as AnyObject
+        
+        ActivityIndicatorManager.showActivityIndicator()
+        NetworkManager.updateInformation(forRequestType: .profile, values: userDict as [String : AnyObject], completion: { [unowned self] (databaseReference) in
+            ActivityIndicatorManager.dismissActivityIndicator()
+            let jobSearchViewController = UIStoryboard.homeStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.JobTabBarController.rawValue)
+            self.navigationController?.isNavigationBarHidden = true
+            self.addChildController(childController: jobSearchViewController, inContentView: self.view)
+        })
     }
     
     

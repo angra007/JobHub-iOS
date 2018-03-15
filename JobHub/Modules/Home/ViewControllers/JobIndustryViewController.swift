@@ -12,6 +12,8 @@ class JobIndustryViewController: UIViewController {
     
     var selectedIndustry = [String] ()
 
+    var userDict : [String : AnyObject]!
+    
     @IBOutlet weak var selectedJobIndustryLabel: UILabel!
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -40,7 +42,8 @@ class JobIndustryViewController: UIViewController {
     
     @IBAction func didTapNextButton(_ sender: UIButton) {
         let jobTitleViewController = UIStoryboard.homeStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.JobTitleController.rawValue) as! JobTitlesViewController
-        jobTitleViewController.selectedIndustrys = self.selectedIndustry
+        userDict ["intrestedIndusties"] = self.selectedIndustry as AnyObject
+        jobTitleViewController.userDict = userDict
         self.navigationController?.pushViewController(jobTitleViewController, animated: true)
     }
     

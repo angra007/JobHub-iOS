@@ -20,7 +20,7 @@ let STORAGE_REFERENCE = Storage.storage().reference()
 enum RequestType {
     
     case profile
-    case selfLifts
+    case job
     case lift
     case licenceImage
     
@@ -28,8 +28,8 @@ enum RequestType {
         switch self {
         case .profile:
             return BASE_REFERENCE.child("users").child(Auth.auth().currentUser!.uid)
-        case .selfLifts:
-            return BASE_REFERENCE.child("lifts").childByAutoId()
+        case .job:
+            return BASE_REFERENCE.child("jobs")
         case .lift:
             return BASE_REFERENCE.child("lifts")
             

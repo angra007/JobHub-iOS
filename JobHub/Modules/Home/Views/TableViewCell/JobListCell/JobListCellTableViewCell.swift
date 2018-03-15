@@ -10,6 +10,14 @@ import UIKit
 
 class JobListCellTableViewCell: UITableViewCell, NibLoadableView {
 
+    @IBOutlet weak var experienceLabel: UILabel!
+    @IBOutlet weak var salaryLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var company: UILabel!
+    @IBOutlet weak var jobTitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

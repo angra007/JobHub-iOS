@@ -89,7 +89,7 @@ class Contact: NSManagedObject {
 }
 
 
-extension Contact: Managed {    
+extension Contact: Managed {
     static var defaultSortDescriptors: [NSSortDescriptor] {
         return [NSSortDescriptor(key: #keyPath(displayName), ascending: true)]
     }
