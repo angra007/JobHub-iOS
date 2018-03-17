@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D102" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Contact" representedClassName=".Contact" syncable="YES">
-        <attribute name="contactID" attributeType="String" syncable="YES"/>
-        <attribute name="displayName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="formattedNumber" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="imageTag" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="isBlocked" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="isContact" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="isTrusted" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="isUser" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="phoneNumber" attributeType="String" syncable="YES"/>
-        <attribute name="profileImage" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="registeredName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="statusMessage" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="thumnailImage" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Contact" representedClassName=".People" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="industry" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="interestLocation" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="intrestedIndusties" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="isBlocked" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="organisation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="selectedTitles" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="skills" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="workExperience" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Job" representedClassName=".Job" syncable="YES">
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
@@ -31,7 +28,7 @@
         <attribute name="salary" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Contact" positionX="-54" positionY="0" width="128" height="255"/>
         <element name="Job" positionX="-54" positionY="108" width="128" height="225"/>
+        <element name="Contact" positionX="-54" positionY="144" width="128" height="210"/>
     </elements>
 </model>

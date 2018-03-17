@@ -44,25 +44,25 @@ class ContactsViewModel :NSObject {
     // Methods to Initilize Contacts Array
     func inililizeFetch () {
         
-        DispatchQueue.main.async {
-            if let request = Contact.sortedFetchRequest {
-                let predicate = NSPredicate(format: "isContact == %@", NSNumber.init(value: true))
-                request.predicate = predicate
-                request.shouldRefreshRefetchedObjects = true
-                request.returnsObjectsAsFaults = false
-                
-                let context = AppDelegate.viewContext
-                do {
-                    let result = try context.fetch(request)
-                    self.datasource.removeAll()
-                    self.unformattedContacts = result
-                    self.filterContacts()
-                }
-                catch {
-                    self.informCompletionForError ()
-                }
-            }
-        }
+//        DispatchQueue.main.async {
+//            if let request = Contact.sortedFetchRequest {
+//                let predicate = NSPredicate(format: "isContact == %@", NSNumber.init(value: true))
+//                request.predicate = predicate
+//                request.shouldRefreshRefetchedObjects = true
+//                request.returnsObjectsAsFaults = false
+//
+//                let context = AppDelegate.viewContext
+//                do {
+//                    let result = try context.fetch(request)
+//                    self.datasource.removeAll()
+//                    self.unformattedContacts = result
+//                    self.filterContacts()
+//                }
+//                catch {
+//                    self.informCompletionForError ()
+//                }
+//            }
+//        }
     }
     
     
@@ -70,14 +70,14 @@ class ContactsViewModel :NSObject {
         
         var contacts = [Character: [Contact]]()
         
-        for entry in data {
-            
-            let name = entry.displayName!.capitalizingFirstLetter()
-            if contacts[name[entry.displayName!.startIndex]] == nil {
-                contacts[name[entry.displayName!.startIndex]] = [Contact]()
-            }
-            contacts[name[name.startIndex]]!.append(entry)
-        }
+//        for entry in data {
+//
+//            let name = entry.displayName!.capitalizingFirstLetter()
+//            if contacts[name[entry.displayName!.startIndex]] == nil {
+//                contacts[name[entry.displayName!.startIndex]] = [Contact]()
+//            }
+//            contacts[name[name.startIndex]]!.append(entry)
+//        }
         
         self.contacts = contacts
         
@@ -132,42 +132,42 @@ class ContactsViewModel :NSObject {
         sections.append ("A")
         return sections
     }
-    
-    func nameForContact (atSectionIndex section : Int, row : Int) -> String {
-        return "name"
-        if let name = datasource[section].contacts [row].displayName {
-            return name
-        }
-        else {
-            return "No Name at section \(section) row \(row) ID \(datasource[section].contacts [row].contactID)"
-        }
-    }
-    
-    func imageTagForContact (atSectionIndex section : Int, row : Int) -> String? {
-        return datasource[section].contacts[row].imageTag
-    }
-    
-    func imageForContact (atSectionIndex section : Int, row : Int) -> UIImage {
-        if let imageData = datasource[section].contacts[row].thumnailImage {
-            if let image = UIImage.init(data: imageData) {
-                return image
-            }
-            else {
-                return UIImage.init(named: "user")!
-            }
-        }
-        else {
-            return UIImage.init(named: "user")!
-        }
-    }
-    
-    func statusForContact (atSectionIndex section : Int, row : Int) -> String {
-        if let statusMessage = datasource[section].contacts[row].statusMessage {
-            return statusMessage
-        }else{
-            return ""
-        }
-    }
+//
+//    func nameForContact (atSectionIndex section : Int, row : Int) -> String {
+//        return "name"
+//        if let name = datasource[section].contacts [row].displayName {
+//            return name
+//        }
+//        else {
+//            return "No Name at section \(section) row \(row) ID \(datasource[section].contacts [row].contactID)"
+//        }
+//    }
+//
+//    func imageTagForContact (atSectionIndex section : Int, row : Int) -> String? {
+//        return datasource[section].contacts[row].imageTag
+//    }
+//
+//    func imageForContact (atSectionIndex section : Int, row : Int) -> UIImage {
+//        if let imageData = datasource[section].contacts[row].thumnailImage {
+//            if let image = UIImage.init(data: imageData) {
+//                return image
+//            }
+//            else {
+//                return UIImage.init(named: "user")!
+//            }
+//        }
+//        else {
+//            return UIImage.init(named: "user")!
+//        }
+//    }
+//
+//    func statusForContact (atSectionIndex section : Int, row : Int) -> String {
+//        if let statusMessage = datasource[section].contacts[row].statusMessage {
+//            return statusMessage
+//        }else{
+//            return ""
+//        }
+//    }
     
     func isContactBlocked (atSectionIndex section : Int, row : Int) -> Bool {
         return datasource[section].contacts[row].isBlocked
@@ -189,16 +189,17 @@ class ContactsViewModel :NSObject {
         else {
             let filterResult = self.unformattedContacts.filter { (contact) -> Bool in
                 
-                let phoneNumber = contact.phoneNumber.lowercased()
-                let displayName = contact.displayName.lowercased()
+//                let phoneNumber = contact.phoneNumber.lowercased()
+//                let displayName = contact.displayName.lowercased()
                 let searchText = self.filteredText.lowercased()
                 
-                if phoneNumber.contains(searchText) || displayName.contains(searchText) {
-                    return true
-                }
-                else {
-                    return false
-                }
+//                if phoneNumber.contains(searchText) || displayName.contains(searchText) {
+//                    return true
+//                }
+//                else {
+//                    return false
+//                }
+                return false
                 
             }
             self.sort(withData: filterResult)

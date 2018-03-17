@@ -39,10 +39,8 @@ class JobSearchViewController: UIViewController {
         tableView.estimatedRowHeight = 90
         
         ActivityIndicatorManager.showActivityIndicator()
-        jobViewModel.loadAll { (response) in
-            ActivityIndicatorManager.dismissActivityIndicator()
-            self.tableView.reloadData()
-        }
+        jobViewModel.loadAll ()
+        jobViewModel.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -80,6 +78,14 @@ class JobSearchViewController: UIViewController {
         self.definesPresentationContext = true
     }
 
+}
+
+extension JobSearchViewController : JobsViewModelDelegate {
+    func fetchCompleted () {
+        ActivityIndicatorManager.dismissActivityIndicator()
+        jobViewModel.getAllJobs ()
+        self.tableView.reloadData()
+    }
 }
 
 extension JobSearchViewController : UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate {

@@ -27,29 +27,22 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBh-Hd-QXF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="94.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rvl-ik-c21">
-                                <rect key="frame" x="16" y="8" width="64" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="KYc-1X-ax9"/>
-                                    <constraint firstAttribute="height" constant="64" id="PXV-bD-y8j"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iN-Ry-PpI">
-                                <rect key="frame" x="88" y="11" width="216" height="16.5"/>
+                                <rect key="frame" x="16" y="11" width="288" height="16.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Title at Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IW-I9-qag">
-                                <rect key="frame" x="88" y="30" width="216" height="16.5"/>
+                                <rect key="frame" x="16" y="30" width="288" height="16.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9h-NM-Del">
-                                <rect key="frame" x="88" y="54" width="100" height="30"/>
+                                <rect key="frame" x="16" y="54" width="136" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.4941176471" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Confirm">
+                                <state key="normal" title="Add Friend">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -65,8 +58,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaW-DM-oBI">
-                                <rect key="frame" x="204" y="54" width="100" height="30"/>
-                                <state key="normal" title="Delete"/>
+                                <rect key="frame" x="168" y="54" width="136" height="30"/>
+                                <state key="normal" title="Remove"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="4"/>
@@ -82,22 +75,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="rvl-ik-c21" firstAttribute="top" secondItem="eBh-Hd-QXF" secondAttribute="top" constant="8" id="1xh-t2-5WI"/>
                             <constraint firstAttribute="trailing" secondItem="6iN-Ry-PpI" secondAttribute="trailing" constant="16" id="4Dr-gm-XgD"/>
                             <constraint firstItem="j9h-NM-Del" firstAttribute="leading" secondItem="2IW-I9-qag" secondAttribute="leading" id="Fi3-zZ-9gJ"/>
                             <constraint firstAttribute="trailing" secondItem="xaW-DM-oBI" secondAttribute="trailing" constant="16" id="Fpz-zR-ddv"/>
                             <constraint firstItem="xaW-DM-oBI" firstAttribute="width" secondItem="j9h-NM-Del" secondAttribute="width" id="IFP-PF-PmQ"/>
                             <constraint firstItem="2IW-I9-qag" firstAttribute="leading" secondItem="6iN-Ry-PpI" secondAttribute="leading" id="ISL-uT-vJM"/>
                             <constraint firstItem="xaW-DM-oBI" firstAttribute="bottom" secondItem="j9h-NM-Del" secondAttribute="bottom" id="Kv1-mz-ZN6"/>
-                            <constraint firstItem="6iN-Ry-PpI" firstAttribute="leading" secondItem="rvl-ik-c21" secondAttribute="trailing" constant="8" id="OXq-Bx-9fV"/>
                             <constraint firstItem="j9h-NM-Del" firstAttribute="top" secondItem="2IW-I9-qag" secondAttribute="bottom" constant="8" id="SJe-Yh-cmT"/>
                             <constraint firstItem="xaW-DM-oBI" firstAttribute="top" secondItem="j9h-NM-Del" secondAttribute="top" id="TIZ-3a-Klh"/>
                             <constraint firstItem="xaW-DM-oBI" firstAttribute="leading" secondItem="j9h-NM-Del" secondAttribute="trailing" constant="16" id="ZML-rp-L01"/>
-                            <constraint firstItem="6iN-Ry-PpI" firstAttribute="top" secondItem="rvl-ik-c21" secondAttribute="top" constant="3" id="Zke-61-aJH"/>
-                            <constraint firstItem="rvl-ik-c21" firstAttribute="leading" secondItem="eBh-Hd-QXF" secondAttribute="leading" constant="16" id="ba5-Ak-ip3"/>
+                            <constraint firstItem="6iN-Ry-PpI" firstAttribute="leading" secondItem="eBh-Hd-QXF" secondAttribute="leading" constant="16" id="ZnS-K0-PMP"/>
                             <constraint firstItem="2IW-I9-qag" firstAttribute="top" secondItem="6iN-Ry-PpI" secondAttribute="bottom" constant="2" id="fEK-LK-MMc"/>
                             <constraint firstAttribute="bottom" secondItem="j9h-NM-Del" secondAttribute="bottom" constant="10.5" id="orz-E0-hkB"/>
                             <constraint firstAttribute="trailing" secondItem="2IW-I9-qag" secondAttribute="trailing" constant="16" id="qwd-GY-KG8"/>
+                            <constraint firstItem="6iN-Ry-PpI" firstAttribute="top" secondItem="eBh-Hd-QXF" secondAttribute="top" constant="11" id="xIs-0h-Bro"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -112,7 +103,6 @@
             <connections>
                 <outlet property="jobTitleLabel" destination="2IW-I9-qag" id="NU3-81-UAX"/>
                 <outlet property="nameLabel" destination="6iN-Ry-PpI" id="Bw7-fJ-H9h"/>
-                <outlet property="profileImage" destination="rvl-ik-c21" id="yLn-qD-dFG"/>
             </connections>
             <point key="canvasLocation" x="34" y="79.5"/>
         </tableViewCell>

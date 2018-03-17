@@ -10,11 +10,13 @@ import Foundation
 import CoreData
 import Firebase
 
-
+protocol JobsViewModelDelegate : class {
+    func fetchCompleted ()
+}
 
 class JobsViewModel {
     
-    
+    weak var delegate : JobsViewModelDelegate!
     var jobs = [Job] ()
     
     
@@ -29,7 +31,7 @@ class JobsViewModel {
         return jobs [index]
     }
 
-    private func getAllJobs ()  {
+    func getAllJobs ()  {
         let context = AppDelegate.viewContext
         if let request = Job.sortedFetchRequest {
             do {
@@ -40,23 +42,26 @@ class JobsViewModel {
         }
     }
     
-    
-    func loadAll (completion : @escaping WebRequestCompletionHandler) {
-        NetworkManager.getValueForSingleEvent(forReference: RequestType.job.reference) { [unowned self] (response) in
+    func loadAll () {
+        var newItems = false;
+        NetworkManager.child(forReference: RequestType.job.reference) { [unowned self] (response) in
             if let snapShot = response as? DataSnapshot {
+                if newItems == false {
+                    return
+                }
                 let context = AppDelegate.viewContext
-                if let result = snapShot.value as? [Any] {
-                     _ = result.map() {
-                        if let dict = $0 as? [String : Any] {
-                            context.performChanges {
-                                let job = Job.insert(into: context, withData: dict)
-                                self.jobs.append(job)
-                            }
-                        }
+                if let result = snapShot.value as? [String : Any] {
+                    context.performChanges {
+                        let job = Job.insert(into: context, withData: result)
+                        self.jobs.append(job)
                     }
                 }
-                completion (nil)
             }
+        }
+        
+        NetworkManager.getValueForSingleEvent(forReference: RequestType.job.reference) { (response) in
+            newItems = true
+            self.delegate.fetchCompleted()
         }
     }
 }

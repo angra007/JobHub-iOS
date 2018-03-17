@@ -35,7 +35,6 @@
 		DE151AF72057C7F000C2E770 /* ContactListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE151AF52057C7EF00C2E770 /* ContactListTableViewCell.xib */; };
 		DE151AF92057C8F300C2E770 /* ContactSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AF82057C8F200C2E770 /* ContactSearchResultViewController.swift */; };
 		DE151AFB2057C98700C2E770 /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AFA2057C98700C2E770 /* ContactViewModel.swift */; };
-		DE151AFF2057CC2200C2E770 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AFD2057CC2200C2E770 /* Contact.swift */; };
 		DE151B002057CC2200C2E770 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151AFE2057CC2200C2E770 /* Status.swift */; };
 		DE151B022057CC6200C2E770 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151B012057CC6100C2E770 /* CoreDataHelper.swift */; };
 		DE151B042057CE2800C2E770 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE151B032057CE2800C2E770 /* StringHelper.swift */; };
@@ -75,6 +74,9 @@
 		DE58AB8F2052D20500D5240A /* JobFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58AB8D2052D20500D5240A /* JobFilterTableViewCell.swift */; };
 		DE58AB902052D20500D5240A /* JobFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE58AB8E2052D20500D5240A /* JobFilterTableViewCell.xib */; };
 		DE58AB922052F0CC00D5240A /* JobHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58AB912052F0CC00D5240A /* JobHomeViewController.swift */; };
+		DE7785452059FB9B00E66A16 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7785442059FB9B00E66A16 /* Contact.swift */; };
+		DE7785482059FDAC00E66A16 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7785472059FDAC00E66A16 /* People.swift */; };
+		DEA9E501205C33AF005A0AA3 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA9E500205C33AF005A0AA3 /* PeopleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,7 +110,6 @@
 		DE151AF52057C7EF00C2E770 /* ContactListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactListTableViewCell.xib; sourceTree = "<group>"; };
 		DE151AF82057C8F200C2E770 /* ContactSearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactSearchResultViewController.swift; sourceTree = "<group>"; };
 		DE151AFA2057C98700C2E770 /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
-		DE151AFD2057CC2200C2E770 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = Models/Contact.swift; sourceTree = "<group>"; };
 		DE151AFE2057CC2200C2E770 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Status.swift; path = Models/Status.swift; sourceTree = "<group>"; };
 		DE151B012057CC6100C2E770 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = Utilities/CoreDataHelper.swift; sourceTree = "<group>"; };
 		DE151B032057CE2800C2E770 /* StringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
@@ -150,6 +151,9 @@
 		DE58AB8D2052D20500D5240A /* JobFilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobFilterTableViewCell.swift; path = Modules/Home/Views/TableViewCell/JobTitle/JobFilterTableViewCell.swift; sourceTree = "<group>"; };
 		DE58AB8E2052D20500D5240A /* JobFilterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = JobFilterTableViewCell.xib; path = Modules/Home/Views/TableViewCell/JobTitle/JobFilterTableViewCell.xib; sourceTree = "<group>"; };
 		DE58AB912052F0CC00D5240A /* JobHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobHomeViewController.swift; path = Modules/Home/ViewControllers/JobHomeViewController.swift; sourceTree = "<group>"; };
+		DE7785442059FB9B00E66A16 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = Models/Contact.swift; sourceTree = "<group>"; };
+		DE7785472059FDAC00E66A16 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		DEA9E500205C33AF005A0AA3 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,9 +346,9 @@
 		DE151AFC2057CBFC00C2E770 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DE151AFD2057CC2200C2E770 /* Contact.swift */,
 				DE151AFE2057CC2200C2E770 /* Status.swift */,
 				DE5569472058FE7E006E52BF /* Jobs.swift */,
+				DE7785442059FB9B00E66A16 /* Contact.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -445,6 +449,7 @@
 		DE5569382058F1BF006E52BF /* People */ = {
 			isa = PBXGroup;
 			children = (
+				DE7785462059FD9B00E66A16 /* Model */,
 				DE55693A2058F1CA006E52BF /* Controller */,
 				DE5569392058F1C5006E52BF /* View */,
 			);
@@ -465,6 +470,7 @@
 			children = (
 				DE55693D2058F207006E52BF /* PeopleViewController.swift */,
 				DE5569452058F7F6006E52BF /* PeopleSearchResultViewController.swift */,
+				DEA9E500205C33AF005A0AA3 /* PeopleViewModel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -560,6 +566,14 @@
 				DE58AB8E2052D20500D5240A /* JobFilterTableViewCell.xib */,
 			);
 			name = JobTitle;
+			sourceTree = "<group>";
+		};
+		DE7785462059FD9B00E66A16 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE7785472059FDAC00E66A16 /* People.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F75396D4494E95BADDEAD0B4 /* Frameworks */ = {
@@ -754,7 +768,6 @@
 				DE55694C2059628D006E52BF /* JobHelper.swift in Sources */,
 				DE4685CC2050D075007E2E85 /* StoryboardHelper.swift in Sources */,
 				DE151AFB2057C98700C2E770 /* ContactViewModel.swift in Sources */,
-				DE151AFF2057CC2200C2E770 /* Contact.swift in Sources */,
 				DE58AB722051EBC400D5240A /* SignUpViewController.swift in Sources */,
 				DE55693E2058F207006E52BF /* PeopleViewController.swift in Sources */,
 				DE58AB7D2051F16800D5240A /* JobIndustryViewController.swift in Sources */,
@@ -762,6 +775,7 @@
 				DE151AE72057ABF900C2E770 /* JobListCellTableViewCell.swift in Sources */,
 				DE151AEA2057AF3100C2E770 /* JobSearchListingViewController.swift in Sources */,
 				DE58AB792051ECD000D5240A /* JobTitlesViewController.swift in Sources */,
+				DEA9E501205C33AF005A0AA3 /* PeopleViewModel.swift in Sources */,
 				DE58AB8F2052D20500D5240A /* JobFilterTableViewCell.swift in Sources */,
 				DE151AE02057A7C100C2E770 /* DeleteInfoTableViewCell.swift in Sources */,
 				DE151ACF2057992300C2E770 /* PrivacyViewController.swift in Sources */,
@@ -774,6 +788,8 @@
 				DE151B002057CC2200C2E770 /* Status.swift in Sources */,
 				DE5569482058FE7E006E52BF /* Jobs.swift in Sources */,
 				DE46858A2050C98F007E2E85 /* AppDelegate.swift in Sources */,
+				DE7785452059FB9B00E66A16 /* Contact.swift in Sources */,
+				DE7785482059FDAC00E66A16 /* People.swift in Sources */,
 				DE58AB712051EBC400D5240A /* LoginViewController.swift in Sources */,
 				DE5569462058F7F6006E52BF /* PeopleSearchResultViewController.swift in Sources */,
 				DE4685B82050CE2E007E2E85 /* DataFetchManager.swift in Sources */,
