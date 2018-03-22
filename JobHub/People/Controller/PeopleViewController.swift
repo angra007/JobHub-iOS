@@ -66,6 +66,14 @@ extension PeopleViewController : PeopleViewModelDelegate {
         self.datasource = datasource
         self.tableView.reloadData()
     }
+    
+    func showActivityIndicator () {
+        ActivityIndicatorManager.showActivityIndicator()
+    }
+    
+    func hideActivityIndicator () {
+        ActivityIndicatorManager.dismissActivityIndicator()
+    }
 }
 
 extension PeopleViewController : PeopleSearchResultDelegate {
@@ -92,19 +100,20 @@ extension PeopleViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : PeopleListingTableViewCell = tableView.dequeuResuableCell(forIndexPath: indexPath)
         cell.delegate = self
+        cell.currentIndex = indexPath
+        let people = self.datasource [indexPath.section].people [indexPath.row]
         
-        let people = self.datasource [indexPath.row]
-//        cell.nameLabel.text = people.firstName! + " " + people.lastName!
-//
-//        if people.organisation == nil && people.location != nil {
-//            cell.jobTitleLabel.text = people.location
-//        }
-//        else if people.organisation != nil && people.location != nil {
-//            cell.jobTitleLabel.text = people.organisation! + " at " + people.location!
-//        }
-//        else {
-//            cell.jobTitleLabel.text = nil
-//        }
+        cell.nameLabel.text = people.firstName! + " " + people.lastName!
+
+        if people.organisation == nil && people.location != nil {
+            cell.jobTitleLabel.text = people.location
+        }
+        else if people.organisation != nil && people.location != nil {
+            cell.jobTitleLabel.text = people.organisation! + " at " + people.location!
+        }
+        else {
+            cell.jobTitleLabel.text = nil
+        }
         
         return cell
     }
@@ -142,11 +151,35 @@ extension PeopleViewController : UITableViewDelegate, UITableViewDataSource {
 }
 
 extension PeopleViewController : PeopleListingDelegate {
-    func didTapConfirm(atIndex index: Int) {
+    func didTapAddFriend(atIndex indexPath: IndexPath) {
         
+        let people = self.datasource [indexPath.section].people [indexPath.row]
+        ActivityIndicatorManager.showActivityIndicator()
+        var requests = [String] ()
+        let reference = RequestType.users.reference.child(people.id!).child("requests")
+        NetworkManager.getValueForSingleEvent(forReference: reference) { [unowned self] (data) in
+            if let snap = data as? DataSnapshot {
+                if let value = snap.value as? [Any] {
+                    requests = value as! [String]
+                }
+                
+                let id = Auth.auth().currentUser!.uid
+                requests.append(id)
+                let dict = ["requests" : requests]
+                NetworkManager.updateInformation(forReference: RequestType.users.reference.child(people.id!), values: dict as [String : AnyObject], completion: { (response) in
+                    self.peopleViewModel.changeStatus(currentStatus: .Requests, id: people.id!)
+                    self.datasource [indexPath.section].people.remove(at: indexPath.row)
+                    self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                    ActivityIndicatorManager.dismissActivityIndicator()
+                })
+            }
+        }
     }
     
-    func didTapReject(atIndex index: Int) {
-        
+    func didTapRemoveFriend(atIndex indexPath: IndexPath) {
+        let people = self.datasource [indexPath.section].people [indexPath.row]
+        peopleViewModel.changeStatus(currentStatus: .Removed, id: people.id!)
+        self.datasource [indexPath.section].people.remove(at: indexPath.row)
+        self.tableView.deleteRows(at: [indexPath], with: .automatic)
     }
 }

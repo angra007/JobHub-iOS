@@ -9,22 +9,22 @@
 import UIKit
 
 protocol PeopleListingDelegate : class {
-    func didTapConfirm (atIndex index : Int)
-    func didTapReject (atIndex index : Int)
+    func didTapAddFriend (atIndex index : IndexPath)
+    func didTapRemoveFriend (atIndex index : IndexPath)
 }
 
 class PeopleListingTableViewCell: UITableViewCell, NibLoadableView {
 
     weak var delegate : PeopleListingDelegate!
     
-    var currentIndex : Int = 0
+    var currentIndex : IndexPath!
     
     @IBAction func didTapDeleteButton(_ sender: UIButton) {
-        self.delegate.didTapReject(atIndex: currentIndex)
+        self.delegate.didTapRemoveFriend(atIndex: currentIndex)
     }
     
     @IBAction func didTapConfirmButton(_ sender: UIButton) {
-        self.delegate.didTapConfirm(atIndex: currentIndex)
+        self.delegate.didTapAddFriend(atIndex: currentIndex)
     }
     
     @IBOutlet weak var jobTitleLabel: UILabel!

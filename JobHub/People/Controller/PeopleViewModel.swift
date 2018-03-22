@@ -10,6 +10,8 @@ import Foundation
 import Firebase
 
 protocol  PeopleViewModelDelegate : class {
+    func showActivityIndicator ()
+    func hideActivityIndicator ()
     func reloadTableView (withDatasource datasource : [PeopleTableViewDatasource])
 }
 
@@ -33,9 +35,10 @@ class PeopleViewModel {
         let requestDatasource = PeopleTableViewDatasource.init(type: .Requests, people: [])
         //let blockedDatasource = PeopleTableViewDatasource.init(type: .Blocked, people: [])
         
-        tableViewDatasource.append(suggestionDatasource)
         tableViewDatasource.append(requestDatasource)
+        tableViewDatasource.append(suggestionDatasource)
         
+        self.delegate.showActivityIndicator()
         var datasource = [Datasource] ()
         NetworkManager.getValueForSingleEvent(forReference: RequestType.users.reference) { [unowned self] (response) in
             if let snapShot = response as? DataSnapshot {
@@ -47,13 +50,18 @@ class PeopleViewModel {
                             if $0 != Auth.auth().currentUser!.uid {
                                 value ["id"] = $0 as AnyObject
                                 let reference = RequestType.people.reference.child($0)
-                                NetworkManager.getAllValues(forReference: reference, completion: { (response) in
+                                NetworkManager.getValueForSingleEvent(forReference: reference, completion: { (response) in
                                     
                                     if let data = response as? DataSnapshot {
                                         if let dict = data.value as? [String : AnyObject] {
                                             if dict ["status"] as! String == "suggestion" {
                                                 let people = People.init(withJson: value)
                                                 let peopleData = Datasource.init(type: .Suggestion, people: people)
+                                                datasource.append(peopleData)
+                                            }
+                                            else if dict ["status"] as! String == "requested"  {
+                                                let people = People.init(withJson: value)
+                                                let peopleData = Datasource.init(type: .Requests, people: people)
                                                 datasource.append(peopleData)
                                             }
                                         }
@@ -71,7 +79,7 @@ class PeopleViewModel {
                                     let type = item.type
                                     let people = item.people
                                     
-                                    if type == .Suggestion {
+                                    if type == .Requests {
                                         var suggestionType = self.tableViewDatasource [0]
                                         var peoples = suggestionType.people
                                         peoples.append(people)
@@ -80,8 +88,12 @@ class PeopleViewModel {
                                     }
                                     else {
                                         var suggestionType = self.tableViewDatasource [1]
-                                        suggestionType.people.append(people)
+                                        var peoples = suggestionType.people
+                                        peoples.append(people)
+                                        suggestionType.people = peoples
+                                        self.tableViewDatasource [1] = suggestionType
                                     }
+                                    self.delegate.hideActivityIndicator()
                                     self.delegate.reloadTableView(withDatasource: self.tableViewDatasource)
 
                                 })
@@ -94,6 +106,15 @@ class PeopleViewModel {
         }
     }
     
+    
+    func changeStatus (currentStatus : PeopleType, id : String) {
+        let reference = RequestType.people.reference.child(id)
+        let status = currentStatus.status
+        let data = ["status" : status]
+        NetworkManager.updateInformation(forReference: reference, values: data as [String : AnyObject]) { (response) in
+            
+        }
+    }
     
     
     

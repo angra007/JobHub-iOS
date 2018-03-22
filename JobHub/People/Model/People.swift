@@ -13,6 +13,26 @@ enum PeopleType {
     case Suggestion
     case Requests
     case Blocked
+    case Removed
+    
+    var status : String {
+        switch self {
+        case .none:
+            return ""
+            
+        case .Suggestion:
+            return "suggestion"
+            
+        case .Requests:
+            return "requested"
+            
+        case .Blocked:
+            return "blocked"
+            
+        case .Removed:
+            return "removed"
+        }
+    }
 }
 
 
@@ -20,7 +40,6 @@ struct PeopleTableViewDatasource {
     var type : PeopleType = .none
     var people : [People]
 }
-
 
 class People {
     

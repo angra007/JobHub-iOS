@@ -933,10 +933,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H4L8MWY7R8;
+				DEVELOPMENT_TEAM = 2DRDH3PW8D;
 				INFOPLIST_FILE = JobHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = aaa.JobHub.www;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sharing-surf.www.SurfSharing-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -949,10 +949,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H4L8MWY7R8;
+				DEVELOPMENT_TEAM = 2DRDH3PW8D;
 				INFOPLIST_FILE = JobHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = aaa.JobHub.www;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sharing-surf.www.SurfSharing-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

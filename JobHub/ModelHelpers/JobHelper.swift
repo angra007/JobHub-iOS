@@ -44,23 +44,36 @@ class JobsViewModel {
     
     func loadAll () {
         var newItems = false;
-        NetworkManager.child(forReference: RequestType.job.reference) { [unowned self] (response) in
-            if let snapShot = response as? DataSnapshot {
-                if newItems == false {
-                    return
-                }
-                let context = AppDelegate.viewContext
-                if let result = snapShot.value as? [String : Any] {
-                    context.performChanges {
-                        let job = Job.insert(into: context, withData: result)
-                        self.jobs.append(job)
-                    }
-                }
-            }
-        }
+//        NetworkManager.child(forReference: RequestType.job.reference) { [unowned self] (response) in
+//            if let snapShot = response as? DataSnapshot {
+//                if newItems == false {
+//                    return
+//                }
+//                print(snapShot)
+//                let context = AppDelegate.viewContext
+//                if let result = snapShot.value as? [String : Any] {
+//                    context.performChanges {
+//                        let job = Job.insert(into: context, withData: result)
+//                        self.jobs.append(job)
+//                    }
+//                }
+//            }
+//        }
         
         NetworkManager.getValueForSingleEvent(forReference: RequestType.job.reference) { (response) in
             newItems = true
+            if let snapShot = response as? DataSnapshot {
+                if let value = snapShot.value as? [[String : Any]] {
+                    _ = value.map() {
+                        let data = $0
+                        let context = AppDelegate.viewContext
+                        context.performChanges {
+                            let job = Job.insert(into: context, withData: data)
+                            self.jobs.append(job)
+                        }
+                    }
+                }
+            }
             self.delegate.fetchCompleted()
         }
     }
