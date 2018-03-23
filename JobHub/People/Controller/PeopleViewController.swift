@@ -43,6 +43,7 @@ class PeopleViewController: UIViewController {
             tableView.delegate = self
             tableView.dataSource = self
             tableView.register(PeopleListingTableViewCell.self)
+            tableView.register(PeopleRequestTableViewCell.self)
         }
     }
 
@@ -98,24 +99,49 @@ extension PeopleViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : PeopleListingTableViewCell = tableView.dequeuResuableCell(forIndexPath: indexPath)
-        cell.delegate = self
-        cell.currentIndex = indexPath
-        let people = self.datasource [indexPath.section].people [indexPath.row]
         
-        cell.nameLabel.text = people.firstName! + " " + people.lastName!
-
-        if people.organisation == nil && people.location != nil {
-            cell.jobTitleLabel.text = people.location
-        }
-        else if people.organisation != nil && people.location != nil {
-            cell.jobTitleLabel.text = people.organisation! + " at " + people.location!
+        
+        if indexPath.section == 0 {
+            let cell : PeopleRequestTableViewCell = tableView.dequeuResuableCell(forIndexPath: indexPath)
+            cell.delegate = self
+            cell.currentIndexpath = indexPath
+            let people = self.datasource [indexPath.section].people [indexPath.row]
+            
+            cell.nameLabel.text = people.firstName! + " " + people.lastName!
+            
+            if people.organisation == nil && people.location != nil {
+                cell.jobTitleLabel.text = people.location
+            }
+            else if people.organisation != nil && people.location != nil {
+                cell.jobTitleLabel.text = people.organisation! + " at " + people.location!
+            }
+            else {
+                cell.jobTitleLabel.text = nil
+            }
+            return cell
         }
         else {
-            cell.jobTitleLabel.text = nil
+            let cell : PeopleListingTableViewCell = tableView.dequeuResuableCell(forIndexPath: indexPath)
+            cell.delegate = self
+            cell.currentIndex = indexPath
+            let people = self.datasource [indexPath.section].people [indexPath.row]
+            
+            cell.nameLabel.text = people.firstName! + " " + people.lastName!
+            
+            if people.organisation == nil && people.location != nil {
+                cell.jobTitleLabel.text = people.location
+            }
+            else if people.organisation != nil && people.location != nil {
+                cell.jobTitleLabel.text = people.organisation! + " at " + people.location!
+            }
+            else {
+                cell.jobTitleLabel.text = nil
+            }
+            
+            cell.emailLabel.text = people.email
+            
+            return cell
         }
-        
-        return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -150,6 +176,20 @@ extension PeopleViewController : UITableViewDelegate, UITableViewDataSource {
     
 }
 
+extension PeopleViewController : PeopleRequestDelegate {
+    func didTapConfirmButton(atIndexPath indexPath: IndexPath) {
+        let people = self.datasource [indexPath.section].people [indexPath.row]
+        peopleViewModel.acceptRequest(forUserID: people.id!) { (finished) in
+            self.datasource [indexPath.section].people.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
+    func didTapRejectButton(atIndexPath indexPath: IndexPath) {
+        print("Did Tap Reject button")
+    }
+}
+
 extension PeopleViewController : PeopleListingDelegate {
     func didTapAddFriend(atIndex indexPath: IndexPath) {
         
@@ -167,10 +207,10 @@ extension PeopleViewController : PeopleListingDelegate {
                 requests.append(id)
                 let dict = ["requests" : requests]
                 NetworkManager.updateInformation(forReference: RequestType.users.reference.child(people.id!), values: dict as [String : AnyObject], completion: { (response) in
+                    ActivityIndicatorManager.dismissActivityIndicator()
                     self.peopleViewModel.changeStatus(currentStatus: .Requests, id: people.id!)
                     self.datasource [indexPath.section].people.remove(at: indexPath.row)
                     self.tableView.deleteRows(at: [indexPath], with: .automatic)
-                    ActivityIndicatorManager.dismissActivityIndicator()
                 })
             }
         }

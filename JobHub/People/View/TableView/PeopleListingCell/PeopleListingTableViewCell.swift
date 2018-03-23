@@ -15,6 +15,7 @@ protocol PeopleListingDelegate : class {
 
 class PeopleListingTableViewCell: UITableViewCell, NibLoadableView {
 
+    @IBOutlet weak var emailLabel: UILabel!
     weak var delegate : PeopleListingDelegate!
     
     var currentIndex : IndexPath!

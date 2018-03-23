@@ -23,6 +23,8 @@ enum RequestType {
     case job
     case people
     case users
+    case contacts
+    case contact
     case licenceImage
     
     var reference : DatabaseReference {
@@ -33,6 +35,10 @@ enum RequestType {
             return BASE_REFERENCE.child("jobs")
         case .people:
             return BASE_REFERENCE.child("people").child(Auth.auth().currentUser!.uid)
+        case .contact:
+            return BASE_REFERENCE.child("contact")
+        case .contacts:
+            return BASE_REFERENCE.child("contacts").child(Auth.auth().currentUser!.uid)
         case .users:
             return BASE_REFERENCE.child("users")
         case .licenceImage:

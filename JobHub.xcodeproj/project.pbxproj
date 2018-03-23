@@ -53,6 +53,8 @@
 		DE4685CA2050D01D007E2E85 /* DataAnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4685C92050D01D007E2E85 /* DataAnalyticsViewController.swift */; };
 		DE4685CC2050D075007E2E85 /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4685CB2050D075007E2E85 /* StoryboardHelper.swift */; };
 		DE4685CE20510324007E2E85 /* UIViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4685CD20510324007E2E85 /* UIViewHelper.swift */; };
+		DE4C165820643D1800D0F9D1 /* PeopleRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4C165620643D1800D0F9D1 /* PeopleRequestTableViewCell.swift */; };
+		DE4C165920643D1800D0F9D1 /* PeopleRequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE4C165720643D1800D0F9D1 /* PeopleRequestTableViewCell.xib */; };
 		DE5569362058DC1B006E52BF /* AddContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5569342058DC1B006E52BF /* AddContactTableViewCell.swift */; };
 		DE5569372058DC1B006E52BF /* AddContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE5569352058DC1B006E52BF /* AddContactTableViewCell.xib */; };
 		DE55693C2058F1DA006E52BF /* PeopleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE55693B2058F1DA006E52BF /* PeopleStoryboard.storyboard */; };
@@ -130,6 +132,8 @@
 		DE4685C92050D01D007E2E85 /* DataAnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataAnalyticsViewController.swift; path = Modules/ViewController/DataAnalyticsViewController.swift; sourceTree = "<group>"; };
 		DE4685CB2050D075007E2E85 /* StoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoryboardHelper.swift; path = Utilities/StoryboardHelper.swift; sourceTree = "<group>"; };
 		DE4685CD20510324007E2E85 /* UIViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewHelper.swift; path = Utilities/UIViewHelper.swift; sourceTree = "<group>"; };
+		DE4C165620643D1800D0F9D1 /* PeopleRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRequestTableViewCell.swift; sourceTree = "<group>"; };
+		DE4C165720643D1800D0F9D1 /* PeopleRequestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleRequestTableViewCell.xib; sourceTree = "<group>"; };
 		DE5569342058DC1B006E52BF /* AddContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactTableViewCell.swift; sourceTree = "<group>"; };
 		DE5569352058DC1B006E52BF /* AddContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddContactTableViewCell.xib; sourceTree = "<group>"; };
 		DE55693B2058F1DA006E52BF /* PeopleStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PeopleStoryboard.storyboard; sourceTree = "<group>"; };
@@ -437,6 +441,15 @@
 			name = Module;
 			sourceTree = "<group>";
 		};
+		DE4C165520643D0100D0F9D1 /* PeopleRequestCell */ = {
+			isa = PBXGroup;
+			children = (
+				DE4C165620643D1800D0F9D1 /* PeopleRequestTableViewCell.swift */,
+				DE4C165720643D1800D0F9D1 /* PeopleRequestTableViewCell.xib */,
+			);
+			path = PeopleRequestCell;
+			sourceTree = "<group>";
+		};
 		DE5569332058DBF8006E52BF /* AddContact */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,6 +491,7 @@
 		DE55693F2058F3D7006E52BF /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				DE4C165520643D0100D0F9D1 /* PeopleRequestCell */,
 				DE5569402058F3DD006E52BF /* PeopleListingCell */,
 			);
 			path = TableView;
@@ -659,6 +673,7 @@
 				DE58AB7B2051ECE600D5240A /* HomeStoryboard.storyboard in Resources */,
 				DE151AD92057A4FE00C2E770 /* PhoneNumberTableViewCell.xib in Resources */,
 				DE151ABC205767F500C2E770 /* SettingsStoryboard.storyboard in Resources */,
+				DE4C165920643D1800D0F9D1 /* PeopleRequestTableViewCell.xib in Resources */,
 				DE151ABA205767E700C2E770 /* ChatStoryboard.storyboard in Resources */,
 				DE55693C2058F1DA006E52BF /* PeopleStoryboard.storyboard in Resources */,
 				DE151AF12057C33D00C2E770 /* ChatListingTableViewCell.xib in Resources */,
@@ -764,6 +779,7 @@
 				DE151AF92057C8F300C2E770 /* ContactSearchResultViewController.swift in Sources */,
 				DE4685922050C98F007E2E85 /* JobHub.xcdatamodeld in Sources */,
 				DE151AD320579D3500C2E770 /* SelectPrivacyViewController.swift in Sources */,
+				DE4C165820643D1800D0F9D1 /* PeopleRequestTableViewCell.swift in Sources */,
 				DE151AC02057689100C2E770 /* ChatListingViewController.swift in Sources */,
 				DE55694C2059628D006E52BF /* JobHelper.swift in Sources */,
 				DE4685CC2050D075007E2E85 /* StoryboardHelper.swift in Sources */,
@@ -933,10 +949,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2DRDH3PW8D;
+				DEVELOPMENT_TEAM = H4L8MWY7R8;
 				INFOPLIST_FILE = JobHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sharing-surf.www.SurfSharing-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = jobhub.com.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -949,10 +965,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2DRDH3PW8D;
+				DEVELOPMENT_TEAM = H4L8MWY7R8;
 				INFOPLIST_FILE = JobHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sharing-surf.www.SurfSharing-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = jobhub.com.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

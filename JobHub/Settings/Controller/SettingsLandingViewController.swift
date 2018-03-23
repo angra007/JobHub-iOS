@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SettingsLandingViewController: UIViewController {
     
@@ -24,6 +25,7 @@ class SettingsLandingViewController: UIViewController {
         case notification
         case about
         case invite
+        case logout
         
         var label : String? {
             switch self {
@@ -41,6 +43,8 @@ class SettingsLandingViewController: UIViewController {
                 return "About and Help"
             case .invite:
                 return "Invite a Friend"
+            case .logout:
+                return "Logout"
             }
         }
         
@@ -60,6 +64,8 @@ class SettingsLandingViewController: UIViewController {
                 return UIImage.init(named: "about")
             case .invite:
                 return UIImage.init(named: "invite")
+            case .logout:
+                return UIImage.init(named: "logout")
             }
         }
         
@@ -89,6 +95,7 @@ class SettingsLandingViewController: UIViewController {
         var sectionFour = [CellType] ()
         sectionFour.append(.about)
         sectionFour.append(.invite)
+        sectionFour.append(.logout)
         datasource.append(sectionFour)
     }
     
@@ -241,6 +248,16 @@ extension SettingsLandingViewController : UITableViewDelegate, UITableViewDataSo
         case .invite:
             let activityViewController = UIActivityViewController(activityItems: [ "Checkout out Radar Locator for your smartphone. Download it today from https://goo.gl/jQT4jg" ], applicationActivities: nil)
             self.present(activityViewController, animated: true, completion: nil)
+            
+            
+        case .logout:
+            do {
+                try Auth.auth().signOut()
+                let vc = UIStoryboard.mainStoryboard().instantiateInitialViewController()!
+                self.present(vc, animated: true, completion: nil)
+            } catch let err {
+                print(err)
+            }
         default:
             break
         }

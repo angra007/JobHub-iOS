@@ -18,14 +18,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PeopleListingTableViewCell" rowHeight="95" id="KGk-i7-Jjw" customClass="PeopleListingTableViewCell" customModule="JobHub" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="94.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="109.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBh-Hd-QXF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="94.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="109.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iN-Ry-PpI">
                                 <rect key="frame" x="16" y="11" width="288" height="16.5"/>
@@ -40,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9h-NM-Del">
-                                <rect key="frame" x="16" y="54" width="136" height="30"/>
+                                <rect key="frame" x="16" y="69" width="136" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.4941176471" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Add Friend">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaW-DM-oBI">
-                                <rect key="frame" x="168" y="54" width="136" height="30"/>
+                                <rect key="frame" x="168" y="69" width="136" height="30"/>
                                 <state key="normal" title="Remove"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -72,6 +72,12 @@
                                     <action selector="didTapDeleteButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Z5f-9r-ByU"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Title at Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDU-GJ-KDQ">
+                                <rect key="frame" x="16" y="48.5" width="134.5" height="16.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -81,13 +87,14 @@
                             <constraint firstItem="xaW-DM-oBI" firstAttribute="width" secondItem="j9h-NM-Del" secondAttribute="width" id="IFP-PF-PmQ"/>
                             <constraint firstItem="2IW-I9-qag" firstAttribute="leading" secondItem="6iN-Ry-PpI" secondAttribute="leading" id="ISL-uT-vJM"/>
                             <constraint firstItem="xaW-DM-oBI" firstAttribute="bottom" secondItem="j9h-NM-Del" secondAttribute="bottom" id="Kv1-mz-ZN6"/>
-                            <constraint firstItem="j9h-NM-Del" firstAttribute="top" secondItem="2IW-I9-qag" secondAttribute="bottom" constant="8" id="SJe-Yh-cmT"/>
-                            <constraint firstItem="xaW-DM-oBI" firstAttribute="top" secondItem="j9h-NM-Del" secondAttribute="top" id="TIZ-3a-Klh"/>
                             <constraint firstItem="xaW-DM-oBI" firstAttribute="leading" secondItem="j9h-NM-Del" secondAttribute="trailing" constant="16" id="ZML-rp-L01"/>
                             <constraint firstItem="6iN-Ry-PpI" firstAttribute="leading" secondItem="eBh-Hd-QXF" secondAttribute="leading" constant="16" id="ZnS-K0-PMP"/>
                             <constraint firstItem="2IW-I9-qag" firstAttribute="top" secondItem="6iN-Ry-PpI" secondAttribute="bottom" constant="2" id="fEK-LK-MMc"/>
+                            <constraint firstItem="kDU-GJ-KDQ" firstAttribute="top" secondItem="2IW-I9-qag" secondAttribute="bottom" constant="2" id="hf4-Hh-bqj"/>
                             <constraint firstAttribute="bottom" secondItem="j9h-NM-Del" secondAttribute="bottom" constant="10.5" id="orz-E0-hkB"/>
+                            <constraint firstItem="j9h-NM-Del" firstAttribute="top" secondItem="kDU-GJ-KDQ" secondAttribute="bottom" constant="4" id="qbf-WT-4PL"/>
                             <constraint firstAttribute="trailing" secondItem="2IW-I9-qag" secondAttribute="trailing" constant="16" id="qwd-GY-KG8"/>
+                            <constraint firstItem="kDU-GJ-KDQ" firstAttribute="leading" secondItem="2IW-I9-qag" secondAttribute="leading" id="teY-md-hUU"/>
                             <constraint firstItem="6iN-Ry-PpI" firstAttribute="top" secondItem="eBh-Hd-QXF" secondAttribute="top" constant="11" id="xIs-0h-Bro"/>
                         </constraints>
                     </view>
@@ -101,6 +108,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="emailLabel" destination="kDU-GJ-KDQ" id="gQr-u8-rjY"/>
                 <outlet property="jobTitleLabel" destination="2IW-I9-qag" id="NU3-81-UAX"/>
                 <outlet property="nameLabel" destination="6iN-Ry-PpI" id="Bw7-fJ-H9h"/>
             </connections>

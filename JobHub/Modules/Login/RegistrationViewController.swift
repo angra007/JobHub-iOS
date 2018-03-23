@@ -47,7 +47,7 @@ class RegistrationViewController: UIViewController {
         self.currentSkillsTextfield.delegate = self
         self.workExperienceTextfield.delegate = self
         self.currentOrganisationTextfield.delegate = self
-
+        self.jobTitleTextField.delegate = self
         
         industryPicker = UIPickerView ()
         industryPicker.delegate = self
