@@ -230,6 +230,11 @@ extension SettingsLandingViewController : UITableViewDelegate, UITableViewDataSo
 //            let profileController = UIStoryboard.settingStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.profileController.rawValue) as! ProfileViewController
 //            profileController.navigationType = .settings
 //            self.navigationController?.pushViewController(profileController, animated: true)
+            
+            let jobTitleViewController = UIStoryboard.homeStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.JobIndustryController.rawValue) as! JobIndustryViewController
+            jobTitleViewController.isFromSetting = true
+            self.navigationController?.pushViewController(jobTitleViewController, animated: true)
+            
             break
         case .savedLocation:
 //            let saveLocationVC = UIStoryboard.settingStoryboard().instantiateViewController(withIdentifier: UIStoryboard.StoryboardIdentifiers.savedLocationController.rawValue)

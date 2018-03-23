@@ -79,6 +79,7 @@
 		DE7785452059FB9B00E66A16 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7785442059FB9B00E66A16 /* Contact.swift */; };
 		DE7785482059FDAC00E66A16 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7785472059FDAC00E66A16 /* People.swift */; };
 		DEA9E501205C33AF005A0AA3 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA9E500205C33AF005A0AA3 /* PeopleViewModel.swift */; };
+		DEE2E4B5206488EC00A175EA /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE2E4B4206488EC00A175EA /* Contacts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -158,6 +159,7 @@
 		DE7785442059FB9B00E66A16 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = Models/Contact.swift; sourceTree = "<group>"; };
 		DE7785472059FDAC00E66A16 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		DEA9E500205C33AF005A0AA3 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
+		DEE2E4B4206488EC00A175EA /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,6 +355,7 @@
 				DE151AFE2057CC2200C2E770 /* Status.swift */,
 				DE5569472058FE7E006E52BF /* Jobs.swift */,
 				DE7785442059FB9B00E66A16 /* Contact.swift */,
+				DEE2E4B4206488EC00A175EA /* Contacts.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -792,6 +795,7 @@
 				DE151AEA2057AF3100C2E770 /* JobSearchListingViewController.swift in Sources */,
 				DE58AB792051ECD000D5240A /* JobTitlesViewController.swift in Sources */,
 				DEA9E501205C33AF005A0AA3 /* PeopleViewModel.swift in Sources */,
+				DEE2E4B5206488EC00A175EA /* Contacts.swift in Sources */,
 				DE58AB8F2052D20500D5240A /* JobFilterTableViewCell.swift in Sources */,
 				DE151AE02057A7C100C2E770 /* DeleteInfoTableViewCell.swift in Sources */,
 				DE151ACF2057992300C2E770 /* PrivacyViewController.swift in Sources */,

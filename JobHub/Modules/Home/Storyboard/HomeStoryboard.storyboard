@@ -22,7 +22,7 @@
         <!--Job Industry View Controller-->
         <scene sceneID="8Yf-fm-xM7">
             <objects>
-                <viewController storyboardIdentifier="jobIndustryVC" id="azE-qt-prj" customClass="JobIndustryViewController" customModule="JobHub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="jobIndustryVC" hidesBottomBarWhenPushed="YES" id="azE-qt-prj" customClass="JobIndustryViewController" customModule="JobHub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5HV-jG-uYe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,6 +135,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="lXG-VC-bDS"/>
                     <connections>
+                        <outlet property="bottomView" destination="6wv-F2-UQ6" id="nvg-nD-EnF"/>
+                        <outlet property="bottonViewHeightConstraint" destination="fiq-Dz-7sv" id="sVF-nj-nO4"/>
                         <outlet property="selectedJobIndustryLabel" destination="wc0-wW-lJz" id="fMP-F0-aiD"/>
                         <outlet property="tableView" destination="9AN-99-7G4" id="IVt-A5-Uaf"/>
                     </connections>

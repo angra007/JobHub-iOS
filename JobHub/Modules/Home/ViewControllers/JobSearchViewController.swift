@@ -33,7 +33,7 @@ class JobSearchViewController: UIViewController {
         tableView.dataSource = self
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 72, bottom: 0, right: 0)
         
-        setUpSearchBar()
+        //setUpSearchBar()
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 90
@@ -41,7 +41,13 @@ class JobSearchViewController: UIViewController {
         ActivityIndicatorManager.showActivityIndicator()
         jobViewModel.loadAll ()
         jobViewModel.delegate = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector (refresh), name: NSNotification.Name(rawValue: "JobSearchChnaged"), object: nil)
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func refresh () {
+        jobViewModel.loadAll ()
     }
 
     override func viewWillAppear(_ animated: Bool) {

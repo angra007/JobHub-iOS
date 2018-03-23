@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class JobIndustryViewController: UIViewController {
     
@@ -14,6 +15,9 @@ class JobIndustryViewController: UIViewController {
 
     var userDict : [String : AnyObject]!
     
+    var isFromSetting = false
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var bottonViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var selectedJobIndustryLabel: UILabel!
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -32,9 +36,46 @@ class JobIndustryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(JobFilterTableViewCell.self)
+        self.navigationItem.largeTitleDisplayMode = .never
+        
+        if isFromSetting == true {
+            bottomView.isHidden = true
+            
+            let doneButton = UIBarButtonItem.init(title: "Done", style: .done, target: self, action: #selector (didTapDoneButton))
+            self.navigationItem.rightBarButtonItems = [doneButton]
+            
+            let userReference = RequestType.profile.reference.child("intrestedIndusties")
+            ActivityIndicatorManager.showActivityIndicator()
+            NetworkManager.getValueForSingleEvent(forReference:userReference , completion: { [unowned self] (response) in
+                ActivityIndicatorManager.dismissActivityIndicator()
+                if let snapShot = response as? DataSnapshot {
+                    if let value = snapShot.value as? [String] {
+                        self.selectedIndustry = value
+                    }
+                }
+                self.tableView.reloadData()
+            })
+        }
+        else {
+            bottomView.isHidden = false
+        }
         // Do any additional setup after loading the view.
     }
 
+    
+    @objc func didTapDoneButton () {
+        let userReference = RequestType.profile.reference
+        let values = ["intrestedIndusties" : self.selectedIndustry]
+        ActivityIndicatorManager.showActivityIndicator()
+        NetworkManager.updateInformation(forReference: userReference, values: values as [String : AnyObject]) { (response) in
+            ActivityIndicatorManager.dismissActivityIndicator()
+            
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "JobSearchChnaged"), object: nil)
+            
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -62,6 +103,14 @@ extension JobIndustryViewController : UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : JobFilterTableViewCell = tableView.dequeuResuableCell(forIndexPath: indexPath)
         cell.jobTitleLabel.text = datasource [indexPath.row]
+        
+        if selectedIndustry.contains(datasource [indexPath.row]) {
+            cell.jobTitleSelectedImageView.image = UIImage.init(named: "ic_check_circle_white_")
+        }
+        else {
+            cell.jobTitleSelectedImageView.image = nil
+        }
+        
         return cell
     }
     

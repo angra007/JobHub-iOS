@@ -60,6 +60,9 @@ class PeopleViewController: UIViewController {
         peopleViewModel.getAllPeople ()
         // Do any additional setup after loading the view.
     }
+    
+    
+    
 }
 
 extension PeopleViewController : PeopleViewModelDelegate {

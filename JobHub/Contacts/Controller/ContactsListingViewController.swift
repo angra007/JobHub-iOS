@@ -72,7 +72,11 @@ class ContactsListingViewController: UIViewController {
             let doneButton = UIBarButtonItem.init(title: "Cancel", style: .plain, target: self, action: #selector (didTapCancelButton))
             self.navigationItem.rightBarButtonItem = doneButton
         }
-        
+        ActivityIndicatorManager.showActivityIndicator()
+        contactViewModel.getContacts { (finished) in
+            ActivityIndicatorManager.dismissActivityIndicator()
+            self.tableView.reloadData()
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -126,37 +130,10 @@ extension ContactsListingViewController : UITableViewDelegate, UITableViewDataSo
         return 30
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView()
-        headerView.backgroundColor = UIColor.init(named : "darkerGrey")
-        let headerLabel = UILabel(frame: CGRect(x: 16, y: 4, width:
-            tableView.bounds.size.width, height: tableView.bounds.size.height))
-        headerLabel.font = UIFont.systemFont(ofSize: 17)
-        headerLabel.textColor = UIColor.darkGray
-        headerLabel.text = self.tableView(self.tableView, titleForHeaderInSection: section)
-        headerLabel.sizeToFit()
-        headerView.addSubview(headerLabel)
-        return headerView
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return contactViewModel.titleOfSection(atIndex: section)
-    }
-    
-    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return contactViewModel.allTitlesForSection()
-    }
-    
-    func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
-        let allTitles = contactViewModel.allTitlesForSection()
-        return allTitles.index(of: title)!
-    }
     
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-    
-
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let contact = contactViewModel.getContactForItem(atSectionIndex: indexPath.section, row: indexPath.row)
@@ -167,10 +144,6 @@ extension ContactsListingViewController : UITableViewDelegate, UITableViewDataSo
 //            self.delegate.didSelectContact()
 //        }
         self.tableView.deselectRow(at: indexPath, animated: true)
-        
-        
-        
-        
     }
 }
 
